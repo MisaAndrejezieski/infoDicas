@@ -273,6 +273,7 @@ body {
 
 .dica-item:hover::before { opacity: 1; }
 
+/* TAGS */
 .dica-item-tag {
     display: inline-block;
     align-self: flex-start;
@@ -281,11 +282,20 @@ body {
     letter-spacing: 2px;
     padding: 4px 12px;
     border-radius: 20px;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+}
+
+.dica-item-tag.windows {
+    background: rgba(0, 150, 255, 0.1);
+    color: #4da6ff;
+    border: 1px solid rgba(0, 150, 255, 0.4);
+}
+
+.dica-item-tag.excel {
     background: rgba(0, 255, 8, 0.1);
     color: #00FF08;
     border: 1px solid rgba(0, 255, 8, 0.4);
-    text-transform: uppercase;
-    font-family: 'Courier New', monospace;
 }
 
 .dica-item h2 {
@@ -363,7 +373,13 @@ body {
     color: #d0d0d0;
 }
 
-.content ul li {
+.content ol {
+    margin: 15px 0 20px 22px;
+    color: #d0d0d0;
+}
+
+.content ul li,
+.content ol li {
     margin-bottom: 8px;
     line-height: 1.6;
     font-size: 15px;
@@ -479,7 +495,7 @@ body {
     .content h1 { font-size: 24px; }
     .content h2 { font-size: 19px; }
     .content h3 { font-size: 16px; }
-    .content p, .content ul li { font-size: 14px; }
+    .content p, .content ul li, .content ol li { font-size: 14px; }
     .content-subtitulo { font-size: 15px; }
     .dica-item { padding: 20px; }
     .dica-item h2 { font-size: 17px; }

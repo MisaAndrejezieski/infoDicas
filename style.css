@@ -1,0 +1,494 @@
+/* ==========================================================
+   INFODICAS — Zen · Cyberpunk · Matrix · Blade Runner
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #e0e0e0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* FUNDO DINÂMICO */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    transition: opacity .8s ease;
+    opacity: 0.35;
+    filter: saturate(1.1) contrast(1.05);
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.55) 50%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 4%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 255, 8, 0.12);
+}
+
+.navbar-interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.navbar-logo-icon {
+    color: #00FF08;
+    font-size: 22px;
+    text-shadow: 0 0 12px #00FF08;
+    animation: pulsa 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulsa {
+    0% { opacity: 0.6; text-shadow: 0 0 6px #00FF08; }
+    100% { opacity: 1; text-shadow: 0 0 18px #00FF08, 0 0 30px #00FF08; }
+}
+
+.navbar-logo-text { font-weight: 300; }
+.navbar-logo-text strong { color: #00FF08; font-weight: 600; }
+
+.navbar-logo:hover .navbar-logo-text {
+    color: #00FF08;
+    text-shadow: 0 0 10px rgba(0, 255, 8, 0.5);
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-nav-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    white-space: nowrap;
+    background: rgba(0, 255, 8, 0.08);
+    color: #00FF08;
+    border: 1px solid rgba(0, 255, 8, 0.4);
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-nav-voltar:hover {
+    background: rgba(0, 255, 8, 0.15);
+    box-shadow: 0 0 18px rgba(0, 255, 8, 0.35);
+    transform: translateX(-3px);
+}
+
+/* CONTAINER E PÁGINAS */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 90px;
+    box-sizing: border-box;
+}
+
+.page {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 4% 60px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease, visibility .6s;
+    overflow-y: auto;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* CONTEÚDO */
+.content {
+    max-width: 860px;
+    width: 100%;
+    margin: auto 0;
+    padding: 45px 40px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(0, 255, 8, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 255, 8, 0.06);
+    position: relative;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 30px;
+    right: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00FF08, transparent);
+    opacity: 0.5;
+}
+
+.content-tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgba(0, 255, 8, 0.7);
+    margin-bottom: 15px;
+    font-family: 'Courier New', monospace;
+}
+
+.content h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.content h1 span {
+    color: #00FF08;
+    text-shadow: 0 0 8px #00FF08, 0 0 20px rgba(0, 255, 8, 0.5);
+}
+
+.content-subtitulo {
+    color: #b8b8b8;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.cursor {
+    color: #00FF08;
+    animation: pisca-cursor 1s steps(2) infinite;
+    font-weight: 700;
+}
+
+@keyframes pisca-cursor {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* LISTA DE DICAS */
+.lista-dicas {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.dica-item {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 255, 8, 0.15);
+    border-radius: 14px;
+    padding: 25px;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dica-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #00FF08;
+    opacity: 0;
+    transition: .3s;
+    box-shadow: 0 0 12px #00FF08;
+}
+
+.dica-item:hover {
+    background: rgba(0, 255, 8, 0.03);
+    border-color: rgba(0, 255, 8, 0.5);
+    transform: translateX(6px);
+    box-shadow: 0 0 25px rgba(0, 255, 8, 0.15);
+}
+
+.dica-item:hover::before { opacity: 1; }
+
+.dica-item-tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(0, 255, 8, 0.1);
+    color: #00FF08;
+    border: 1px solid rgba(0, 255, 8, 0.4);
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+}
+
+.dica-item h2 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 600;
+    margin: 0;
+}
+
+.dica-item p {
+    color: #a0a0a0;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.dica-item-btn {
+    color: #00FF08;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+    transition: .3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dica-item:hover .dica-item-btn { text-shadow: 0 0 10px #00FF08; }
+.dica-item:hover .dica-item-btn i { transform: translateX(5px); }
+
+/* DICA INDIVIDUAL */
+.content-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #00FF08;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 25px;
+    transition: .3s;
+    font-family: 'Courier New', monospace;
+}
+
+.content-voltar:hover {
+    text-shadow: 0 0 10px #00FF08;
+    transform: translateX(-4px);
+}
+
+.content h2 {
+    color: #00FF08;
+    font-size: 22px;
+    margin: 40px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 255, 8, 0.2);
+    font-weight: 600;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 18px;
+    margin: 28px 0 12px;
+    font-weight: 600;
+}
+
+.content p {
+    color: #d0d0d0;
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 15px;
+}
+
+.content ul {
+    margin: 15px 0 20px 22px;
+    color: #d0d0d0;
+}
+
+.content ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.content code {
+    background: rgba(0, 255, 8, 0.08);
+    color: #00FF08;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 13.5px;
+    border: 1px solid rgba(0, 255, 8, 0.15);
+}
+
+.content pre {
+    background: #0a0a0a;
+    border: 1px solid rgba(0, 255, 8, 0.2);
+    border-left: 3px solid #00FF08;
+    border-radius: 10px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 15px 0 25px;
+    box-shadow: inset 0 0 20px rgba(0, 255, 8, 0.03);
+}
+
+.content pre code {
+    background: none;
+    border: none;
+    color: #b8ffb8;
+    padding: 0;
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+.intro-dica {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.aviso-dica {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background: rgba(255, 200, 0, 0.06);
+    border: 1px solid rgba(255, 200, 0, 0.3);
+    border-left: 4px solid #ffc800;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 25px 0;
+}
+
+.aviso-dica i {
+    color: #ffc800;
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.aviso-dica div {
+    color: #e8e8e8;
+    line-height: 1.6;
+    font-size: 14.5px;
+}
+
+.aviso-dica strong { color: #ffc800; }
+
+.rodape-dica {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 255, 8, 0.15);
+    text-align: center;
+}
+
+.rodape-dica p {
+    color: #8a8a8a;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* SCROLLBAR */
+.page::-webkit-scrollbar { width: 8px; }
+.page::-webkit-scrollbar-track { background: transparent; }
+.page::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 8, 0.3);
+    border-radius: 4px;
+}
+.page::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 8, 0.5);
+    box-shadow: 0 0 10px #00FF08;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 1020px) {
+    .content { padding: 35px 30px; }
+    .content h1 { font-size: 32px; }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar { padding: 14px 4%; }
+    .navbar-logo { font-size: 16px; }
+    .navbar-logo-icon { font-size: 18px; }
+    .btn-nav-voltar { padding: 6px 12px; font-size: 12px; }
+    .container { padding-top: 80px; }
+    .page {
+        top: 80px;
+        height: calc(100vh - 80px);
+        padding: 20px 4% 40px;
+    }
+    .content { padding: 28px 22px; border-radius: 16px; }
+    .content h1 { font-size: 24px; }
+    .content h2 { font-size: 19px; }
+    .content h3 { font-size: 16px; }
+    .content p, .content ul li { font-size: 14px; }
+    .content-subtitulo { font-size: 15px; }
+    .dica-item { padding: 20px; }
+    .dica-item h2 { font-size: 17px; }
+    .dica-item p { font-size: 13.5px; }
+    .aviso-dica { padding: 15px; gap: 12px; }
+    .aviso-dica i { font-size: 18px; }
+    .aviso-dica div { font-size: 13px; }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar-logo-text { display: none; }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="infoDicas — Dicas de informática em uma vibe zen, cyberpunk e matrix.">
+    <meta name="author" content="Misael Andrejezieski">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>infoDicas | Zen · Cyberpunk · Matrix</title>
+</head>
+
+<body>
+
+    <div class="background" id="background"></div>
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <div class="navbar-interface">
+            <a href="#home" class="navbar-logo" data-page="0">
+                <span class="navbar-logo-icon">◉</span>
+                <span class="navbar-logo-text">info<strong>Dicas</strong></span>
+            </a>
+
+            <div class="navbar-actions">
+                <button class="btn-nav-voltar" id="btn-voltar" style="display:none;">
+                    <i class="bi bi-arrow-left"></i> Voltar
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- PÁGINA 0: HOME -->
+        <section class="page active" id="home">
+            <div class="content">
+                <span class="content-tag">// terminal.log</span>
+                <h1>info<span>Dicas</span></h1>
+                <p class="content-subtitulo">
+                    Dicas de informática pra quem curte resolver problemas com calma,
+                    café e um pouco de Matrix na veia. <span class="cursor">_</span>
+                </p>
+
+                <div class="lista-dicas">
+                    <article class="dica-item" data-page="1">
+                        <span class="dica-item-tag">EXCEL</span>
+                        <h2>Remover senha de planilha sem saber a senha</h2>
+                        <p>Destrave planilhas protegidas editando o XML interno do arquivo — sem programas, sem complicação.</p>
+                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA 1: EXCEL REMOVER SENHA -->
+        <section class="page" id="excel-remover-senha">
+            <div class="content">
+                <a href="#home" class="content-voltar" data-page="0">
+                    <i class="bi bi-arrow-left"></i> voltar para as dicas
+                </a>
+
+                <span class="dica-item-tag">EXCEL</span>
+                <h1>Remover senha de planilha do Excel sem saber a senha</h1>
+
+                <p class="intro-dica">
+                    Sabe quando você abre uma planilha e não consegue editar nada porque está protegida,
+                    e você <strong>não sabe a senha</strong>? Neste tutorial eu te mostro como remover essa
+                    proteção editando diretamente o XML interno do arquivo — <strong>sem precisar de
+                    programas especiais e sem saber a senha</strong>.
+                </p>
+
+                <div class="aviso-dica">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <div>
+                        <strong>Importante:</strong> este método funciona apenas para <em>proteção de
+                        planilha</em> (aquela que impede editar células, formatar, etc.). <strong>NÃO
+                        funciona</strong> para <em>senha de abertura</em> (quando o Excel pede senha antes
+                        mesmo de abrir o arquivo).
+                    </div>
+                </div>
+
+                <h2>📋 Passo a passo completo</h2>
+
+                <h3>Passo 1: Faça um backup do arquivo (obrigatório)</h3>
+                <p>Clique com o botão direito no arquivo Excel → escolha <strong>"Copiar"</strong> → cole na mesma pasta para gerar uma cópia (ex.: <code>Planilha - Cópia.xlsx</code>). <strong>Todas as etapas seguintes devem ser feitas apenas na cópia</strong>, garantindo que o arquivo original permaneça intacto.</p>
+
+                <h3>Passo 2: Ative a exibição das extensões de arquivo</h3>
+                <p>O Windows 11 oculta as extensões por padrão. Para exibi-las:</p>
+                <ul>
+                    <li>Abra o <strong>Explorador de Arquivos</strong>;</li>
+                    <li>Clique em <strong>"Exibir"</strong> no menu superior;</li>
+                    <li>Escolha <strong>"Mostrar"</strong>;</li>
+                    <li>Marque <strong>"Extensões de nomes de arquivos"</strong>.</li>
+                </ul>
+
+                <h3>Passo 3: Renomeie o .xlsx para .zip</h3>
+                <p>Clique com o botão direito na cópia → <strong>Renomear</strong> → altere a extensão final de <code>.xlsx</code> para <code>.zip</code> → pressione Enter. O Windows exibirá um aviso dizendo que "alterar a extensão pode tornar o arquivo inutilizável". Clique em <strong>"Sim"</strong> para continuar.</p>
+
+                <h3>Passo 4: Abra o ZIP e localize o arquivo da planilha</h3>
+                <p>Dê um duplo clique no arquivo <code>.zip</code> (ou clique com o botão direito e escolha abrir com um compactador). Navegue pela seguinte estrutura de pastas:</p>
+                <pre><code>xl → worksheets</code></pre>
+                <p>Você verá arquivos como <code>sheet1.xml</code>, <code>sheet2.xml</code>, etc. Cada um corresponde a uma aba da planilha. <strong>Se não souber qual aba está protegida, teste uma por uma</strong>.</p>
+
+                <h3>Passo 5: Edite o arquivo XML</h3>
+                <p><strong>Forma recomendada: editar diretamente com o 7-Zip</strong> (evita erros).</p>
+                <p>Abra o arquivo ZIP com o 7-Zip, clique com o botão direito em <code>sheet1.xml</code> → escolha <strong>"Editar"</strong>. O arquivo abrirá no Bloco de Notas. Pressione <code>Ctrl + F</code> e pesquise por:</p>
+                <pre><code>sheetProtection</code></pre>
+                <p>Você encontrará uma tag parecida com esta:</p>
+                <pre><code>&lt;sheetProtection algorithmName="SHA-512" hashValue="..." saltValue="..." spinCount="100000" sheet="1" objects="1" scenarios="1"/&gt;</code></pre>
+                <p><strong>Selecione todo o trecho, desde <code>&lt;sheetProtection</code> até <code>/&gt;</code>, e apague com a tecla Delete</strong>. Atenção: apague <strong>apenas esse trecho</strong>, sem remover o código ao redor.</p>
+
+                <h3>Passo 6: Salve e restaure o formato do arquivo</h3>
+                <p>Salve o arquivo XML. Feche a janela do compactador (se o 7-Zip perguntar se deseja atualizar o arquivo compactado, escolha <strong>"Sim"</strong>). Por fim, renomeie o arquivo de <code>.zip</code> de volta para <code>.xlsx</code> e confirme o aviso. Abra o arquivo no Excel — a proteção da planilha deve ter sido removida.</p>
+
+                <h2>🔍 Observações complementares</h2>
+
+                <p><strong>Se encontrar <code>&lt;workbookProtection&gt;</code> em vez de <code>&lt;sheetProtection&gt;</code>:</strong> isso significa que a proteção é de <em>estrutura da pasta de trabalho</em> (impede adicionar, excluir ou renomear abas). Nesse caso, o arquivo a ser editado é o <code>xl\workbook.xml</code>, e você deve apagar essa tag também.</p>
+
+                <p><strong>Se o arquivo apresentar erro de "arquivo corrompido" ao abrir:</strong> provavelmente houve exclusão a mais ou a menos durante a edição. Recomenda-se apagar a cópia atual, criar uma nova a partir do original e refazer o processo. <strong>Evite descompactar e recompactar manualmente</strong> — isso costuma causar problemas na estrutura interna do arquivo.</p>
+
+                <div class="rodape-dica">
+                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
+                    <a href="#home" class="content-voltar" data-page="0">
+                        <i class="bi bi-arrow-left"></i> ver mais dicas
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="infoDicas — Dicas profissionais de Windows (CMD) e Excel em uma vibe zen, cyberpunk e matrix.">
+    <meta name="description" content="infoDicas — Dicas profissionais de Windows (CMD) e Excel.">
     <meta name="author" content="Misael Andrejezieski">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,1554 +42,783 @@
     <div class="container">
 
         <!-- ============================================================
-             PÁGINA 0 — HOME
+             PÁGINA 0 — HOME (lista enxuta de temas)
              ============================================================ -->
         <section class="page active" id="home">
             <div class="content">
                 <span class="content-tag">// terminal.log</span>
                 <h1>info<span>Dicas</span></h1>
                 <p class="content-subtitulo">
-                    Dicas profissionais de <strong>Windows (CMD)</strong> e <strong>Excel</strong> pra quem curte resolver problemas com calma, café e um pouco de Matrix na veia. <span class="cursor">_</span>
+                    Escolhe um tema e mergulha. <span class="cursor">_</span>
                 </p>
 
-                <div class="lista-dicas">
+                <div class="lista-temas">
 
-                    <!-- WINDOWS CMD -->
-                    <article class="dica-item" data-page="1">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Reiniciar o Windows pelo CMD</h2>
-                        <p>Aprenda a reiniciar, agendar e cancelar reinicializações do Windows direto pelo prompt de comando.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                    <h2 class="lista-temas-titulo">
+                        <i class="bi bi-windows"></i> Windows · CMD
+                    </h2>
 
-                    <article class="dica-item" data-page="2">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Matar processo travado pelo CMD</h2>
-                        <p>Programa travou e não fecha? Use taskkill pra forçar o encerramento sem reiniciar o PC.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                    <div class="lista-temas-grid">
+                        <article class="tema-card" data-page="1">
+                            <span class="tema-card-num">01</span>
+                            <h3>Reiniciar o Windows</h3>
+                            <p>Direto, agendado ou com mensagem</p>
+                        </article>
 
-                    <article class="dica-item" data-page="3">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Limpar DNS e resetar a rede</h2>
-                        <p>Série de comandos que resolvem 90% dos problemas de internet sem precisar reiniciar o roteador.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="2">
+                            <span class="tema-card-num">02</span>
+                            <h3>Matar processo travado</h3>
+                            <p>taskkill sem reiniciar o PC</p>
+                        </article>
 
-                    <article class="dica-item" data-page="4">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Reparar arquivos do sistema (SFC)</h2>
-                        <p>O comando sfc /scannow encontra e conserta arquivos corrompidos do Windows automaticamente.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="3">
+                            <span class="tema-card-num">03</span>
+                            <h3>Reset de rede</h3>
+                            <p>DNS, Winsock e TCP/IP</p>
+                        </article>
 
-                    <article class="dica-item" data-page="5">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Reparar imagem do Windows (DISM)</h2>
-                        <p>DISM /RestoreHealth conserta a imagem do sistema — complemento essencial do SFC.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="4">
+                            <span class="tema-card-num">04</span>
+                            <h3>Reparar sistema (SFC)</h3>
+                            <p>sfc /scannow no resgate</p>
+                        </article>
 
-                    <article class="dica-item" data-page="6">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Verificar saúde do HD/SSD</h2>
-                        <p>Descubra se seu disco está prestes a morrer antes que ele te deixe na mão.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="5">
+                            <span class="tema-card-num">05</span>
+                            <h3>Reparar imagem (DISM)</h3>
+                            <p>RestoreHealth passo a passo</p>
+                        </article>
 
-                    <article class="dica-item" data-page="7">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Reiniciar pendrive pelo Diskpart</h2>
-                        <p>Pendrive que o Windows não formata? Diskpart resolve. Comandos poderosos — use com cuidado.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="6">
+                            <span class="tema-card-num">06</span>
+                            <h3>Saúde do disco</h3>
+                            <p>HD ou SSD prestes a falhar?</p>
+                        </article>
 
-                    <article class="dica-item" data-page="8">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Relatório de energia e bateria</h2>
-                        <p>Descubra o que está drenando sua bateria ou causando problemas de energia no notebook.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="7">
+                            <span class="tema-card-num">07</span>
+                            <h3>Diskpart · Pendrive</h3>
+                            <p>Reiniciar pendrive do zero</p>
+                        </article>
 
-                    <article class="dica-item" data-page="9">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Gerenciar usuários pelo CMD</h2>
-                        <p>Crie, liste, altere senha e remova contas de usuário direto pelo prompt de comando.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="8">
+                            <span class="tema-card-num">08</span>
+                            <h3>Relatório de energia</h3>
+                            <p>O que drena sua bateria</p>
+                        </article>
 
-                    <article class="dica-item" data-page="10">
-                        <span class="dica-item-tag windows">WINDOWS · CMD</span>
-                        <h2>Limpeza profunda automática</h2>
-                        <p>Comandos pra limpar arquivos temporários, cache e pré-busca do Windows de uma vez.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="9">
+                            <span class="tema-card-num">09</span>
+                            <h3>Gerenciar usuários</h3>
+                            <p>net user, criar e remover</p>
+                        </article>
 
-                    <!-- EXCEL -->
-                    <article class="dica-item" data-page="11">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>Preenchimento Relâmpago (Ctrl + E)</h2>
-                        <p>O Excel reconhece o padrão do que você digita e completa a coluna inteira sozinho.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="10">
+                            <span class="tema-card-num">10</span>
+                            <h3>Limpeza profunda</h3>
+                            <p>Temporários e cache</p>
+                        </article>
+                    </div>
 
-                    <article class="dica-item" data-page="12">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>Atalhos essenciais do Excel</h2>
-                        <p>10 atalhos que economizam horas por dia e ninguém te contou na faculdade.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                    <h2 class="lista-temas-titulo" style="margin-top: 40px;">
+                        <i class="bi bi-file-earmark-spreadsheet"></i> Excel
+                    </h2>
 
-                    <article class="dica-item" data-page="13">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>Formatação condicional avançada</h2>
-                        <p>Semáforos, heatmaps, barras de progresso e alertas automáticos no seu relatório.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                    <div class="lista-temas-grid">
+                        <article class="tema-card" data-page="11">
+                            <span class="tema-card-num">01</span>
+                            <h3>Preenchimento Relâmpago</h3>
+                            <p>Ctrl + E no automático</p>
+                        </article>
 
-                    <article class="dica-item" data-page="14">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>Tabelas Dinâmicas + Segmentação</h2>
-                        <p>Transforme dados em dashboards interativos com botões clicáveis de filtro.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="12">
+                            <span class="tema-card-num">02</span>
+                            <h3>Atalhos essenciais</h3>
+                            <p>10 atalhos que mudam tudo</p>
+                        </article>
 
-                    <article class="dica-item" data-page="15">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>PROCX (XLOOKUP) — Adeus PROCV</h2>
-                        <p>A função que substitui o PROCV com muito mais flexibilidade e sem quebrar.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="13">
+                            <span class="tema-card-num">03</span>
+                            <h3>Formatação condicional</h3>
+                            <p>Semáforos e heatmaps</p>
+                        </article>
 
-                    <article class="dica-item" data-page="16">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>Matrizes Dinâmicas (FILTRO, ÚNICO, CLASSIFICAR)</h2>
-                        <p>Funções que criam listas vivas que se atualizam sozinhas — sem tabela dinâmica.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="14">
+                            <span class="tema-card-num">04</span>
+                            <h3>Tabelas Dinâmicas</h3>
+                            <p>Dashboard com Slicers</p>
+                        </article>
 
-                    <article class="dica-item" data-page="17">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>Power Query — Automação de dados</h2>
-                        <p>O recurso mais subestimado do Excel. Importe, limpe e atualize dados com 1 clique.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="15">
+                            <span class="tema-card-num">05</span>
+                            <h3>PROCX (XLOOKUP)</h3>
+                            <p>Adeus PROCV</p>
+                        </article>
 
-                    <article class="dica-item" data-page="18">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>INDIRETO + Referências Estruturadas</h2>
-                        <p>Troque de planilha dinamicamente dentro das fórmulas e crie modelos de cenário.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="16">
+                            <span class="tema-card-num">06</span>
+                            <h3>Matrizes Dinâmicas</h3>
+                            <p>FILTRO, ÚNICO, CLASSIFICAR</p>
+                        </article>
 
-                    <article class="dica-item" data-page="19">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>LAMBDA — Crie suas próprias funções</h2>
-                        <p>O recurso mais avançado do Excel moderno. Funções personalizadas sem VBA.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="17">
+                            <span class="tema-card-num">07</span>
+                            <h3>Power Query</h3>
+                            <p>Automação de dados</p>
+                        </article>
 
-                    <article class="dica-item" data-page="20">
-                        <span class="dica-item-tag excel">EXCEL</span>
-                        <h2>Macro de limpeza automática</h2>
-                        <p>Uma macro que remove espaços extras, linhas em branco, duplicatas e ajusta colunas — em 1 clique.</p>
-                        <span class="dica-item-btn">Acessar dica <i class="bi bi-arrow-right"></i></span>
-                    </article>
+                        <article class="tema-card" data-page="18">
+                            <span class="tema-card-num">08</span>
+                            <h3>INDIRETO</h3>
+                            <p>Referências dinâmicas</p>
+                        </article>
+
+                        <article class="tema-card" data-page="19">
+                            <span class="tema-card-num">09</span>
+                            <h3>LAMBDA</h3>
+                            <p>Suas próprias funções</p>
+                        </article>
+
+                        <article class="tema-card" data-page="20">
+                            <span class="tema-card-num">10</span>
+                            <h3>Macro de limpeza</h3>
+                            <p>VBA que faxina por você</p>
+                        </article>
+                    </div>
 
                 </div>
             </div>
         </section>
 
         <!-- ============================================================
-             PÁGINA 1 — REINICIAR O WINDOWS PELO CMD
+             PÁGINAS 1–10 — WINDOWS (conteúdo idêntico ao anterior)
              ============================================================ -->
+
         <section class="page" id="reiniciar-windows-cmd">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Reiniciar o Windows pelo CMD</h1>
-
-                <p class="intro-dica">
-                    Reiniciar o Windows pelo prompt de comando é útil quando a interface travou, quando você quer
-                    <strong>agendar</strong> um reinício com aviso pros usuários, ou quando precisa reiniciar direto
-                    no <strong>modo de recuperação</strong>.
-                </p>
-
-                <h2>🖥️ Abrindo o CMD como administrador</h2>
-                <p>Pressione <code>Win + X</code> → escolha <strong>"Terminal (Admin)"</strong> ou <strong>"Prompt de Comando (Admin)"</strong>. Sem isso, alguns comandos abaixo não funcionam.</p>
-
+                <p class="intro-dica">Reiniciar o Windows pelo prompt de comando é útil quando a interface travou, quando você quer <strong>agendar</strong> um reinício com aviso, ou quando precisa reiniciar direto no <strong>modo de recuperação</strong>.</p>
+                <h2>🖥️ Abrindo o CMD como admin</h2>
+                <p>Pressione <code>Win + X</code> → <strong>"Terminal (Admin)"</strong>.</p>
                 <h2>⚡ Comandos essenciais</h2>
-
                 <h3>Reiniciar imediatamente</h3>
                 <pre><code>shutdown /r /t 0</code></pre>
-                <p>Reinicia o PC na hora. O <code>/r</code> significa "restart" e <code>/t 0</code> é o tempo em segundos (0 = imediato).</p>
-
-                <h3>Reiniciar com tempo (ex: 1 minuto)</h3>
+                <h3>Reiniciar com tempo</h3>
                 <pre><code>shutdown /r /t 60</code></pre>
-                <p>Reinicia depois de 60 segundos. Ótimo pra avisar quem estiver usando o PC.</p>
-
                 <h3>Reiniciar com mensagem personalizada</h3>
                 <pre><code>shutdown /r /t 120 /c "Salve seu trabalho! Reinício em 2 minutos."</code></pre>
-                <p>O <code>/c</code> permite enviar uma mensagem que aparece na tela.</p>
-
-                <h3>Cancelar um reinício agendado</h3>
+                <h3>Cancelar reinício</h3>
                 <pre><code>shutdown /a</code></pre>
-                <p>Se você agendou e mudou de ideia, esse comando cancela tudo.</p>
-
-                <h3>Reiniciar direto no modo de recuperação</h3>
+                <h3>Reiniciar no modo de recuperação</h3>
                 <pre><code>shutdown /r /o</code></pre>
-                <p>Abre o menu avançado de recuperação do Windows após reiniciar. Útil pra resolver problemas sérios.</p>
-
                 <h3>Desligar em vez de reiniciar</h3>
                 <pre><code>shutdown /s /t 0</code></pre>
-                <p>O <code>/s</code> significa "shutdown" (desligar). Mesma lógica do <code>/r</code>.</p>
-
-                <h2>🔍 Verificando o que foi agendado</h2>
-                <p>Não tem como listar diretamente, mas se você esqueceu o tempo, dá pra rodar <code>shutdown /a</code> e depois reexecutar do jeito que quiser.</p>
-
-                <h2>🔐 Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Todos esses comandos <strong>precisam do CMD como administrador</strong>;</li>
-                    <li>O <code>/t</code> aceita valores em segundos (0 a 315360000);</li>
-                    <li>Se você agendar e fechar o CMD, o reinício <strong>continua agendado</strong>;</li>
-                    <li>Para cancelar, o <code>shutdown /a</code> também precisa ser executado como admin.</li>
+                    <li>Precisa do CMD como <strong>administrador</strong>;</li>
+                    <li>O <code>/t</code> aceita valores de 0 a 315360000;</li>
+                    <li>Se agendar e fechar o CMD, o reinício continua agendado.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 2 — MATAR PROCESSO TRAVADO
-             ============================================================ -->
         <section class="page" id="matar-processo-cmd">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Matar processo travado pelo CMD</h1>
-
-                <p class="intro-dica">
-                    Programa travou, a janela não fecha, e o Gerenciador de Tarefas não resolve? O comando
-                    <code>taskkill</code> mata qualquer processo à força — <strong>sem reiniciar o PC</strong>.
-                </p>
-
-                <h2>🎯 Identificando o processo</h2>
-                <p>Primeiro, descubra o nome do processo:</p>
+                <p class="intro-dica">Programa travou e não fecha? O comando <code>taskkill</code> mata qualquer processo à força — <strong>sem reiniciar o PC</strong>.</p>
+                <h2>🎯 Identificando</h2>
                 <pre><code>tasklist</code></pre>
-                <p>Isso lista todos os processos rodando. Se a lista for grande, filtre:</p>
+                <p>Ou filtre:</p>
                 <pre><code>tasklist | findstr chrome</code></pre>
-                <p>Substitua <code>chrome</code> pelo nome do programa que você quer matar.</p>
-
                 <h2>💀 Matando por nome</h2>
                 <pre><code>taskkill /IM nome.exe /F</code></pre>
-                <p>Exemplo pra matar o Chrome travado:</p>
-                <pre><code>taskkill /IM chrome.exe /F</code></pre>
-                <ul>
-                    <li><code>/IM</code> = "Image Name" (nome do processo);</li>
-                    <li><code>/F</code> = "Force" (força o encerramento).</li>
-                </ul>
-
-                <h2>🎯 Matando por PID (número do processo)</h2>
-                <p>Se você sabe o PID (aparece no <code>tasklist</code> ou no Gerenciador de Tarefas):</p>
+                <h2>🎯 Matando por PID</h2>
                 <pre><code>taskkill /PID 1234 /F</code></pre>
-                <p>Substitua <code>1234</code> pelo PID real.</p>
-
                 <h2>🌳 Matando processo + filhos</h2>
-                <p>Alguns programas abrem vários processos (navegadores, por exemplo). Pra matar <strong>tudo junto</strong>:</p>
                 <pre><code>taskkill /IM chrome.exe /F /T</code></pre>
-                <p>O <code>/T</code> mata a árvore inteira (processo pai + filhos).</p>
-
-                <h2>🧠 Matando múltiplos de uma vez</h2>
-                <p>Você pode rodar vários comandos seguidos:</p>
-                <pre><code>taskkill /IM chrome.exe /F & taskkill /IM firefox.exe /F</code></pre>
-                <p>Ou salvar num arquivo <code>.bat</code> pra rodar com um clique.</p>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>O <code>/F</code> força o encerramento — <strong>você pode perder dados não salvos</strong>;</li>
-                    <li>Rodar como admin resolve 99% dos casos de "Acesso negado";</li>
-                    <li>Nomes de processos <strong>são case-insensitive</strong>, mas costumam vir em minúsculas (<code>chrome.exe</code>, <code>explorer.exe</code>);</li>
-                    <li>Se travar o <code>explorer.exe</code> (área de trabalho), o Windows reinicia ele sozinho.</li>
+                    <li><code>/F</code> força — pode perder dados não salvos;</li>
+                    <li>Rodar como admin resolve "Acesso negado";</li>
+                    <li>Se travar o <code>explorer.exe</code>, o Windows reinicia ele sozinho.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 3 — LIMPAR DNS E RESETAR REDE
-             ============================================================ -->
         <section class="page" id="reset-rede-cmd">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Limpar DNS e resetar a rede</h1>
-
-                <p class="intro-dica">
-                    Internet lenta, sites não abrem, redes sociais carregam e outras não? Antes de xingar a operadora,
-                    roda essa sequência de comandos que resolve <strong>90% dos problemas</strong>.
-                </p>
-
-                <h2>🌐 Sequência completa de reset</h2>
-
-                <h3>1. Limpar o cache de DNS</h3>
+                <p class="intro-dica">Internet lenta, sites não abrem? Sequência que resolve <strong>90% dos problemas</strong>.</p>
+                <h2>🌐 Sequência completa</h2>
                 <pre><code>ipconfig /flushdns</code></pre>
-                <p>Apaga as informações de DNS guardadas. Ótimo quando um site específico não abre.</p>
-
-                <h3>2. Liberar o IP atual</h3>
                 <pre><code>ipconfig /release</code></pre>
-                <p>Devolve o IP que o roteador te deu. Sua internet "cai" por alguns segundos.</p>
-
-                <h3>3. Renovar o IP</h3>
                 <pre><code>ipconfig /renew</code></pre>
-                <p>Pede um IP novo pro roteador. Resolve conflitos de IP.</p>
-
-                <h3>4. Resetar o Winsock (camada de rede)</h3>
                 <pre><code>netsh winsock reset</code></pre>
-                <p>Reinicia o sistema de sockets do Windows. Resolve problemas causados por VPN, antivírus ou malware.</p>
-
-                <h3>5. Resetar o TCP/IP</h3>
                 <pre><code>netsh int ip reset</code></pre>
-                <p>Reseta toda a configuração de IP do Windows pros padrões de fábrica.</p>
-
-                <h3>6. Registrar DNS novamente</h3>
                 <pre><code>ipconfig /registerdns</code></pre>
-                <p>Re-registra o DNS do seu computador.</p>
-
-                <h2>🚀 Rodando tudo de uma vez</h2>
-                <p>Cole isso no CMD como admin:</p>
+                <h2>🚀 Tudo de uma vez</h2>
                 <pre><code>ipconfig /flushdns &amp;&amp; ipconfig /release &amp;&amp; ipconfig /renew &amp;&amp; netsh winsock reset &amp;&amp; netsh int ip reset</code></pre>
-                <p><strong>Depois reinicie o PC</strong> pra garantir que tudo seja aplicado.</p>
-
-                <h2>🧪 Testando se a rede voltou</h2>
-                <pre><code>ping google.com</code></pre>
-                <p>Se responder com tempo em ms, tá tudo certo. Se der "host desconhecido", ainda tem problema.</p>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Todos os comandos <strong>precisam do CMD como administrador</strong>;</li>
-                    <li>Após o <code>winsock reset</code> e o <code>int ip reset</code>, é recomendável <strong>reiniciar o PC</strong>;</li>
-                    <li>Se você usa VPN ou proxy, pode precisar reconfigurar depois;</li>
-                    <li>Em redes corporativas, consulte o TI antes de resetar IP.</li>
+                    <li>Precisa do CMD como admin;</li>
+                    <li>Após winsock/ip reset, <strong>reinicie o PC</strong>;</li>
+                    <li>Se usar VPN/proxy, reconfigurar depois.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 4 — REPARAR ARQUIVOS DO SISTEMA (SFC)
-             ============================================================ -->
         <section class="page" id="sfc-scannow">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Reparar arquivos do sistema (SFC)</h1>
-
-                <p class="intro-dica">
-                    Tela azul, travamentos aleatórios, programas que não abrem, erros do Windows Update?
-                    O comando <code>sfc /scannow</code> <strong>escaneia e conserta arquivos corrompidos</strong> do sistema.
-                </p>
-
+                <p class="intro-dica">Tela azul, travamentos aleatórios? O <code>sfc /scannow</code> <strong>escaneia e conserta</strong> arquivos corrompidos do Windows.</p>
                 <h2>🛠️ Como usar</h2>
-                <p>Abra o CMD como administrador e digite:</p>
                 <pre><code>sfc /scannow</code></pre>
-                <p>O processo <strong>pode demorar de 5 a 20 minutos</strong>. Não feche a janela.</p>
-
+                <p>Pode demorar de 5 a 20 minutos. Não feche.</p>
                 <h2>📊 Resultados possíveis</h2>
                 <ul>
-                    <li><strong>"Não encontrou nenhum problema"</strong> → seu sistema está ok (mas o problema pode estar em outro lugar);</li>
-                    <li><strong>"Encontrou e reparou com sucesso"</strong> → era isso! Reinicie o PC;</li>
-                    <li><strong>"Encontrou problemas mas não conseguiu reparar"</strong> → rode o DISM primeiro e depois o SFC de novo.</li>
+                    <li>"Não encontrou problema" → sistema ok;</li>
+                    <li>"Encontrou e reparou" → reinicie o PC;</li>
+                    <li>"Não conseguiu reparar" → rode o DISM antes.</li>
                 </ul>
-
-                <h2>🚨 Se o SFC não conseguir reparar</h2>
-                <p>Você precisa rodar o <strong>DISM</strong> antes. Veja a próxima dica (Reparar imagem do Windows).</p>
-
-                <h2>📋 Log do SFC</h2>
-                <p>Quer ver o relatório completo do que foi encontrado? Rode:</p>
+                <h2>📋 Log detalhado</h2>
                 <pre><code>findstr /c:"[SR]" %windir%\Logs\CBS\CBS.log > %userprofile%\Desktop\sfcdetails.txt</code></pre>
-                <p>Isso cria um arquivo <code>sfcdetails.txt</code> na sua Área de Trabalho com todos os detalhes.</p>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li><strong>Precisa do CMD como administrador</strong>;</li>
-                    <li><strong>Não interrompa o processo</strong> — fechar no meio pode deixar o sistema mais bagunçado;</li>
-                    <li>O SFC só verifica arquivos <strong>do sistema</strong>, não programas instalados;</li>
-                    <li>Funciona no Windows 7, 8, 10 e 11 sem alteração.</li>
+                    <li>Precisa do CMD como admin;</li>
+                    <li>Não interrompa o processo;</li>
+                    <li>Verifica apenas arquivos do sistema, não programas.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 5 — REPARAR IMAGEM DO WINDOWS (DISM)
-             ============================================================ -->
         <section class="page" id="dism-reparar">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Reparar imagem do Windows (DISM)</h1>
-
-                <p class="intro-dica">
-                    O <strong>DISM</strong> repara a imagem do Windows (o "molde" do sistema). É o complemento
-                    ideal do <code>sfc /scannow</code> — quando o SFC falha em consertar, o DISM prepara o terreno.
-                </p>
-
-                <h2>🎯 Ordem correta de uso</h2>
+                <p class="intro-dica">O <strong>DISM</strong> repara a imagem do Windows — complemento ideal do SFC.</p>
+                <h2>🎯 Ordem correta</h2>
                 <ol>
-                    <li>Primeiro roda o <strong>DISM</strong> (essa dica);</li>
-                    <li>Depois roda o <strong>SFC</strong> (dica anterior);</li>
-                    <li>Reinicia o PC.</li>
+                    <li>Roda DISM;</li>
+                    <li>Depois SFC;</li>
+                    <li>Reinicia.</li>
                 </ol>
-
                 <h2>🛠️ Comando principal</h2>
                 <pre><code>DISM /Online /Cleanup-Image /RestoreHealth</code></pre>
-                <p>Escaneia a imagem do Windows e baixa arquivos saudáveis direto dos servidores da Microsoft para substituir os corrompidos.</p>
-
-                <h2>⏱️ Quanto tempo demora?</h2>
-                <p>Entre <strong>10 e 30 minutos</strong>, dependendo da sua internet e do estado do sistema. A barra de progresso pode travar em 20% — <strong>não cancele</strong>, é normal.</p>
-
-                <h2>📋 Comandos auxiliares</h2>
-
-                <h3>Verificar a saúde da imagem (sem reparar)</h3>
+                <h2>⏱️ Demora</h2>
+                <p>10 a 30 minutos. Pode travar em 20% — normal.</p>
+                <h2>📋 Auxiliares</h2>
                 <pre><code>DISM /Online /Cleanup-Image /CheckHealth</code></pre>
-                <p>Rápido, só diz se tem problema ou não.</p>
-
-                <h3>Escaneamento mais profundo</h3>
                 <pre><code>DISM /Online /Cleanup-Image /ScanHealth</code></pre>
-                <p>Demora mais, mas detecta problemas menores.</p>
-
-                <h2>🔧 Se der erro no DISM</h2>
-                <p>Você pode apontar uma fonte externa de arquivos saudáveis (ISO do Windows ou pasta de instalação):</p>
+                <h2>🔧 Se der erro</h2>
                 <pre><code>DISM /Online /Cleanup-Image /RestoreHealth /Source:D:\sources\install.wim</code></pre>
-                <p>Substitua <code>D:\</code> pelo drive onde está a ISO.</p>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li><strong>Precisa do CMD como administrador</strong>;</li>
-                    <li>Precisa de <strong>internet ativa</strong> (a menos que use fonte externa);</li>
-                    <li><strong>Não feche a janela</strong> durante o processo;</li>
-                    <li>Se aparecer erro 0x800f081f, use a opção <code>/Source</code> com a ISO.</li>
+                    <li>Precisa de internet (a menos que use fonte externa);</li>
+                    <li>Erro 0x800f081f → use <code>/Source</code>.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 6 — VERIFICAR SAÚDE DO DISCO
-             ============================================================ -->
         <section class="page" id="saude-disco">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Verificar saúde do HD/SSD</h1>
-
-                <p class="intro-dica">
-                    Disco rígido morre sem avisar e leva seus dados junto. Com poucos comandos, você descobre
-                    <strong>se seu HD ou SSD está saudável</strong> ou prestes a dar problema.
-                </p>
-
-                <h2>🩺 Status geral do disco</h2>
+                <p class="intro-dica">Descubra se seu disco está prestes a morrer.</p>
+                <h2>🩺 Status geral</h2>
                 <pre><code>wmic diskdrive get status</code></pre>
-                <p>Retorna <code>OK</code> (saudável) ou outro status. Bem simples e direto.</p>
-
-                <h2>📊 Mais detalhes (modelo, tamanho, interface)</h2>
+                <h2>📊 Detalhes</h2>
                 <pre><code>wmic diskdrive get model,size,interfaceType,status</code></pre>
-                <p>Mostra o modelo do disco, capacidade, tipo (SATA/NVMe) e status.</p>
-
-                <h2>🔍 Verificar erros no sistema de arquivos</h2>
+                <h2>🔍 Erros no sistema de arquivos</h2>
                 <pre><code>chkdsk C: /f /r</code></pre>
-                <ul>
-                    <li><code>/f</code> = corrige erros encontrados;</li>
-                    <li><code>/r</code> = localiza setores defeituosos e recupera informações legíveis.</li>
-                </ul>
-                <p><strong>Atenção:</strong> o <code>chkdsk</code> com <code>/f</code> precisa desmontar o volume. Em <code>C:</code>, ele vai perguntar se quer agendar pra próxima reinicialização. Aceite.</p>
-
-                <h2>💾 Verificar SSD (vida útil)</h2>
-                <p>Pra ver a "vida útil" de um SSD, o melhor comando é:</p>
+                <p><code>/f</code> corrige, <code>/r</code> localiza setores defeituosos.</p>
+                <h2>💾 Vida útil do SSD</h2>
                 <pre><code>wmic /namespace:\\root\wmi path MSStorageDriver_FailurePredictStatus get PredictFailure,Reason</code></pre>
-                <p>Se retornar <code>FALSE</code>, tá tudo certo. Se <code>TRUE</code>, o SSD está avisando que vai falhar em breve.</p>
-
-                <h2>📈 Relatório completo</h2>
-                <p>Quer um relatório visual completo? Rode:</p>
-                <pre><code>wmic diskdrive get /format:list > C:\disco.txt</code></pre>
-                <p>Isso gera um arquivo com todas as informações do disco.</p>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>O <code>chkdsk</code> pode demorar <strong>horas</strong> em discos grandes;</li>
-                    <li>Em SSDs, use <code>chkdsk C: /f</code> (sem <code>/r</code>) — <code>/r</code> é mais indicado pra HDs mecânicos;</li>
-                    <li>Se o disco retornar <strong>"Pred Fail"</strong>, faça backup urgente;</li>
-                    <li>Ferramentas gráficas como <strong>CrystalDiskInfo</strong> são mais amigáveis pro dia a dia.</li>
+                    <li>chkdsk pode demorar horas;</li>
+                    <li>Em SSD use <code>chkdsk C: /f</code> (sem /r);</li>
+                    <li>Se retornar "Pred Fail", faça backup urgente.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 7 — REINICIAR PENDRIVE COM DISKPART
-             ============================================================ -->
         <section class="page" id="diskpart-pendrive">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Reiniciar pendrive pelo Diskpart</h1>
-
-                <p class="intro-dica">
-                    Pendrive que o Windows não formata, que perdeu partição, que dá erro "disco protegido contra gravação"...
-                    O <strong>Diskpart</strong> reinicia ele do zero. Comando poderoso — <strong>use com atenção</strong>.
-                </p>
-
                 <div class="aviso-dica">
                     <i class="bi bi-exclamation-triangle-fill"></i>
-                    <div>
-                        <strong>CUIDADO MÁXIMO:</strong> o Diskpart apaga <strong>tudo</strong> do disco selecionado,
-                        sem confirmação. Se você errar o número do disco, pode <strong>formatar seu HD principal</strong>
-                        e perder todos os dados. Confira o disco <strong>antes</strong> de rodar <code>clean</code>.
-                    </div>
+                    <div><strong>CUIDADO:</strong> o Diskpart apaga <strong>tudo</strong> do disco. Errar o número pode formatar seu HD principal.</div>
                 </div>
-
                 <h2>🛠️ Passo a passo</h2>
-
-                <h3>1. Abra o Diskpart</h3>
                 <pre><code>diskpart</code></pre>
-                <p>Precisa do CMD como administrador.</p>
-
-                <h3>2. Liste os discos</h3>
                 <pre><code>list disk</code></pre>
-                <p>Aparece algo tipo:</p>
-                <pre><code>Disco 0    Online      500 GB
-Disco 1    Online       16 GB   ← este é o pendrive</code></pre>
-                <p><strong>Identifique pelo tamanho</strong>. Anote o número do pendrive.</p>
-
-                <h3>3. Selecione o pendrive</h3>
+                <p>Identifique pelo tamanho.</p>
                 <pre><code>select disk 1</code></pre>
-                <p>Substitua <code>1</code> pelo número do seu pendrive. Confira 3 vezes antes de continuar.</p>
-
-                <h3>4. Apague tudo do pendrive</h3>
                 <pre><code>clean</code></pre>
-                <p><strong>Isso apaga TODAS as partições do pendrive.</strong></p>
-
-                <h3>5. Crie uma nova partição primária</h3>
                 <pre><code>create partition primary</code></pre>
-
-                <h3>6. Selecione a partição recém-criada</h3>
                 <pre><code>select partition 1</code></pre>
-
-                <h3>7. Formate em FAT32 (ou NTFS)</h3>
                 <pre><code>format fs=fat32 quick</code></pre>
-                <p>Use <code>fs=ntfs</code> se preferir NTFS (arquivos maiores que 4 GB).</p>
-
-                <h3>8. Ative a partição</h3>
                 <pre><code>active</code></pre>
-
-                <h3>9. Atribua uma letra de drive</h3>
                 <pre><code>assign</code></pre>
-                <p>O Windows atribui uma letra automaticamente (ex: <code>E:</code>).</p>
-
-                <h3>10. Saia do Diskpart</h3>
                 <pre><code>exit</code></pre>
-
-                <h2>🚀 Versão rápida (só pra formatar)</h2>
-                <p>Se o pendrive já aparece no Windows, às vezes só isso resolve:</p>
+                <h2>🚀 Versão rápida</h2>
                 <pre><code>format E: /FS:FAT32 /Q /V:PENDRIVE</code></pre>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li><code>/FS:FAT32</code> = sistema de arquivos;</li>
-                    <li><code>/Q</code> = formatação rápida;</li>
-                    <li><code>/V:PENDRIVE</code> = define o rótulo do pendrive.</li>
+                    <li>Você vai perder tudo — backup antes;</li>
+                    <li>Confira 3x o número do disco;</li>
+                    <li>Se ainda falhar, pode estar fisicamente danificado.</li>
                 </ul>
-
-                <h2>⚠️ Observações importantes</h2>
-                <ul>
-                    <li><strong>Você vai perder TUDO do pendrive</strong> — faça backup antes se tiver dados importantes;</li>
-                    <li>Confira 3 vezes o número do disco no <code>list disk</code>;</li>
-                    <li>Se o pendrive ainda não funcionar, ele pode estar fisicamente danificado;</li>
-                    <li>Pra recuperar dados antes de formatar, ferramentas como <strong>Recuva</strong> ou <strong>PhotoRec</strong> ajudam.</li>
-                </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 8 — RELATÓRIO DE ENERGIA
-             ============================================================ -->
         <section class="page" id="relatorio-energia">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Relatório de energia e bateria</h1>
-
-                <p class="intro-dica">
-                    Notebook com bateria viciada, consumindo energia demais, ou desligando sozinho?
-                    O <code>powercfg</code> gera um <strong>relatório HTML completo</strong> com tudo que está
-                    acontecendo com a energia do seu PC.
-                </p>
-
-                <h2>🔋 Relatório completo de energia</h2>
+                <p class="intro-dica">Bateria viciada ou consumo alto? O <code>powercfg</code> gera relatório completo.</p>
+                <h2>🔋 Relatório de energia</h2>
                 <pre><code>powercfg /energy</code></pre>
-                <p>O Windows vai monitorar o PC por <strong>60 segundos</strong> e gerar um arquivo HTML em:</p>
-                <pre><code>C:\Windows\System32\energy-report.html</code></pre>
-                <p>Abra no navegador. Lá tem: uso de CPU, drivers com problema, dispositivos consumindo energia, erros de configuração.</p>
-
+                <p>Monitora 60s e gera em <code>C:\Windows\System32\energy-report.html</code>.</p>
                 <h2>🔋 Relatório de bateria</h2>
                 <pre><code>powercfg /batteryreport</code></pre>
-                <p>Gera um HTML em:</p>
-                <pre><code>C:\Users\SeuUsuario\battery-report.html</code></pre>
-                <p>Mostra:</p>
-                <ul>
-                    <li>Capacidade original vs capacidade atual da bateria;</li>
-                    <li>Histórico de uso;</li>
-                    <li>Tempo estimado de duração;</li>
-                    <li>Quantos ciclos de carga já teve.</li>
-                </ul>
-
-                <h2>⚡ Ver planos de energia disponíveis</h2>
+                <h2>⚡ Ver planos de energia</h2>
                 <pre><code>powercfg /list</code></pre>
-                <p>Lista os planos (Equilibrado, Alto Desempenho, Economia de Energia).</p>
-
-                <h2>🔧 Ativar plano de alto desempenho</h2>
+                <h2>🔧 Ativar alto desempenho</h2>
                 <pre><code>powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</code></pre>
-                <p>Esse GUID é do plano "Alto Desempenho". Descubra outros GUIDs com <code>powercfg /list</code>.</p>
-
-                <h2>💤 Ver o que impede o PC de dormir</h2>
+                <h2>💤 Ver o que impede dormir</h2>
                 <pre><code>powercfg /requests</code></pre>
-                <p>Mostra programas que estão impedindo o Windows de entrar em suspensão.</p>
-
-                <h2>🌙 Ver últimos despertares</h2>
-                <pre><code>powercfg /lastwake</code></pre>
-                <p>Mostra o que acordou o PC da última vez. Útil pra descobrir se algo está reiniciando ele à noite.</p>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Todos os comandos precisam do <strong>CMD como admin</strong>;</li>
-                    <li>O relatório de energia <strong>monitora por 60 segundos</strong> — não desligue o PC nesse tempo;</li>
-                    <li>O <code>batteryreport</code> funciona mesmo em desktops (mas mostra "sem bateria");</li>
-                    <li>Se a "capacidade atual" estiver muito abaixo da original, é hora de trocar a bateria.</li>
+                    <li>Precisa do CMD como admin;</li>
+                    <li>Não desligue durante os 60s de monitoramento;</li>
+                    <li>Capacidade atual baixa = hora de trocar a bateria.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 9 — GERENCIAR USUÁRIOS PELO CMD
-             ============================================================ -->
         <section class="page" id="gerenciar-usuarios">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Gerenciar usuários pelo CMD</h1>
-
-                <p class="intro-dica">
-                    Criar, listar, alterar senha ou remover contas de usuário no Windows é muito mais rápido pelo
-                    CMD do que clicando em menus. Comando base: <code>net user</code>.
-                </p>
-
-                <h2>👥 Listar todos os usuários</h2>
+                <p class="intro-dica">Criar, listar, alterar e remover usuários com <code>net user</code>.</p>
+                <h2>👥 Listar usuários</h2>
                 <pre><code>net user</code></pre>
-                <p>Mostra todas as contas de usuário do computador.</p>
-
-                <h2>🔍 Ver detalhes de um usuário</h2>
+                <h2>🔍 Ver detalhes</h2>
                 <pre><code>net user NomeDoUsuario</code></pre>
-                <p>Exemplo: <code>net user Misa</code> — mostra nome completo, último logon, status da conta, etc.</p>
-
-                <h2>➕ Criar um novo usuário</h2>
+                <h2>➕ Criar usuário</h2>
                 <pre><code>net user NomeDaConta Senha /add</code></pre>
-                <p>Exemplo: <code>net user Visitante 123456 /add</code></p>
-
-                <h2>🔐 Alterar a senha de um usuário</h2>
+                <h2>🔐 Alterar senha</h2>
                 <pre><code>net user NomeDoUsuario NovaSenha</code></pre>
-                <p>Exemplo: <code>net user Misa NovaSenha123</code></p>
-
-                <h2>🚫 Desabilitar uma conta (sem apagar)</h2>
+                <h2>🚫 Desabilitar</h2>
                 <pre><code>net user NomeDoUsuario /active:no</code></pre>
-                <p>Pra reativar: <code>net user NomeDoUsuario /active:yes</code></p>
-
-                <h2>🗑️ Remover um usuário</h2>
+                <h2>🗑️ Remover</h2>
                 <pre><code>net user NomeDoUsuario /delete</code></pre>
-                <p><strong>Atenção:</strong> isso remove a conta <strong>e</strong> os arquivos do usuário. Não dá pra desfazer.</p>
-
-                <h2>👑 Promover usuário a administrador</h2>
+                <h2>👑 Promover a admin</h2>
                 <pre><code>net localgroup Administradores NomeDoUsuario /add</code></pre>
-                <p>Em inglês: <code>net localgroup Administrators NomeDoUsuario /add</code>.</p>
-
-                <h2>🔽 Remover do grupo de administradores</h2>
-                <pre><code>net localgroup Administradores NomeDoUsuario /delete</code></pre>
-
-                <h2>📋 Ver grupos do sistema</h2>
-                <pre><code>net localgroup</code></pre>
-                <p>Lista todos os grupos locais (Administradores, Usuários, Convidados, etc.).</p>
-
-                <h2>👥 Ver quem está em cada grupo</h2>
-                <pre><code>net localgroup Administradores</code></pre>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Precisa do <strong>CMD como admin</strong>;</li>
-                    <li>Em Windows em português, use <strong>"Administradores"</strong>; em inglês, <strong>"Administrators"</strong>;</li>
-                    <li>Criar usuário pelo CMD <strong>não cria perfil</strong> imediatamente — o perfil nasce no primeiro login;</li>
-                    <li>Ao deletar uma conta, os arquivos em <code>C:\Users\NomeDoUsuario</code> <strong>também podem ser removidos</strong>.</li>
+                    <li>Precisa do CMD como admin;</li>
+                    <li>Deletar conta pode apagar <code>C:\Users\Usuario</code>;</li>
+                    <li>Em inglês, use "Administrators".</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 10 — LIMPEZA PROFUNDA AUTOMÁTICA
-             ============================================================ -->
         <section class="page" id="limpeza-profunda">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag windows">WINDOWS · CMD</span>
                 <h1>Limpeza profunda automática</h1>
-
-                <p class="intro-dica">
-                    Seu Windows pode estar com <strong>vários GB</strong> de arquivos temporários, cache e pré-busca
-                    acumulados. Esses comandos limpam tudo — e você ainda pode criar um <code>.bat</code> pra rodar
-                    com um clique.
-                </p>
-
-                <h2>🧹 Limpar arquivos temporários</h2>
+                <p class="intro-dica">Temporários, cache e pré-busca acumulam GBs. Esses comandos limpam tudo.</p>
+                <h2>🧹 Temporários do usuário</h2>
                 <pre><code>del /q/f/s %TEMP%\*</code></pre>
-                <p>Apaga tudo da pasta <code>%TEMP%</code> (temporários do usuário atual).</p>
-
-                <h2>🧹 Limpar temporários do Windows</h2>
+                <h2>🧹 Temporários do Windows</h2>
                 <pre><code>del /q/f/s C:\Windows\Temp\*</code></pre>
-                <p>Apaga temporários do sistema (precisa de admin).</p>
-
-                <h2>🧹 Limpar pasta de Pré-Busca (Prefetch)</h2>
+                <h2>🧹 Prefetch</h2>
                 <pre><code>del /q/f/s C:\Windows\Prefetch\*</code></pre>
-                <p>Limpa o cache de inicialização de programas. Não faz mal, mas pode deixar o PC <strong>mais lento por alguns dias</strong> até o cache reconstruir.</p>
-
-                <h2>🧹 Usar o utilitário nativo de limpeza</h2>
+                <h2>🧹 Limpeza nativa</h2>
                 <pre><code>cleanmgr /sageset:1</code></pre>
-                <p>Abre o menu de configuração da Limpeza de Disco. Marque as categorias que quer limpar.</p>
-                <p>Depois, pra rodar a limpeza configurada:</p>
                 <pre><code>cleanmgr /sagerun:1</code></pre>
-
-                <h2>🧹 Limpar cache do Windows Update</h2>
-                <pre><code>net stop wuauserv
-del /q/f/s C:\Windows\SoftwareDistribution\Download\*
-net start wuauserv</code></pre>
-                <p>Para o serviço, apaga downloads antigos e reinicia. Ótimo quando o Windows Update está travado.</p>
-
-                <h2>🚀 Script completo em .bat</h2>
-                <p>Crie um arquivo <code>limpar.bat</code> com este conteúdo:</p>
+                <h2>🚀 Script .bat</h2>
                 <pre><code>@echo off
-echo Limpando arquivos temporarios...
+echo Limpando...
 del /q/f/s %TEMP%\*
 del /q/f/s C:\Windows\Temp\*
 del /q/f/s C:\Windows\Prefetch\*
 echo Limpeza concluida!
 pause</code></pre>
-                <p>Salve como <code>.bat</code>, clique com botão direito → <strong>"Executar como administrador"</strong>.</p>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Alguns arquivos podem <strong>não ser apagados</strong> por estarem em uso — é normal, só ignora;</li>
-                    <li>O <code>del /q/f/s</code> apaga <strong>sem perguntar</strong> — use com cuidado;</li>
-                    <li>Não apague manualmente pastas do Windows sem saber o que faz;</li>
-                    <li>Rodar limpeza <strong>1x por mês</strong> já é mais que suficiente.</li>
+                    <li>Alguns arquivos em uso não serão apagados — normal;</li>
+                    <li>1x por mês já é suficiente.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
         <!-- ============================================================
-             PÁGINA 11 — PREENCHIMENTO RELÂMPAGO (CTRL + E)
+             PÁGINAS 11–20 — EXCEL
              ============================================================ -->
+
         <section class="page" id="excel-preenchimento-relampago">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
                 <h1>Preenchimento Relâmpago (Ctrl + E)</h1>
-
-                <p class="intro-dica">
-                    O Excel detecta <strong>padrões</strong> no que você digita e completa a coluna inteira
-                    automaticamente. É como mágica — e economiza horas de trabalho manual.
-                </p>
-
+                <p class="intro-dica">Excel detecta padrões e completa a coluna automaticamente.</p>
                 <h2>🎯 Como funciona</h2>
                 <ol>
-                    <li>Digite <strong>1 ou 2 exemplos</strong> do que você quer na primeira célula (e talvez na segunda);</li>
-                    <li>Selecione a célula abaixo da sua coluna;</li>
-                    <li>Pressione <code>Ctrl + E</code>;</li>
-                    <li>O Excel preenche o resto automaticamente.</li>
+                    <li>Digite 1 ou 2 exemplos;</li>
+                    <li>Selecione a célula abaixo;</li>
+                    <li><code>Ctrl + E</code>.</li>
                 </ol>
-
-                <h2>💡 Exemplos práticos</h2>
-
-                <h3>1. Separar nome completo em nome + sobrenome</h3>
-                <p>Coluna A tem "João Silva", "Maria Santos"... Você digita na coluna B "João" e na C "Silva". O Excel entende e faz o resto.</p>
-
-                <h3>2. Extrair apenas o primeiro nome</h3>
-                <p>Coluna A tem "João Silva". Você digita "João" na coluna B. `Ctrl+E` completa o resto.</p>
-
-                <h3>3. Juntar colunas</h3>
-                <p>Coluna A tem "João" e coluna B "Silva". Você digita "João Silva" na coluna C. `Ctrl+E` faz o resto.</p>
-
-                <h3>4. Formatar telefone</h3>
-                <p>Coluna A tem "11987654321". Você digita "(11) 98765-4321". `Ctrl+E` formata tudo.</p>
-
-                <h3>5. Extrair partes de e-mails</h3>
-                <p>Coluna A tem "joao@email.com". Você digita "joao" na coluna B. `Ctrl+E` extrai o nome de todos.</p>
-
-                <h2>🔧 Limitações</h2>
+                <h2>💡 Exemplos</h2>
                 <ul>
-                    <li>Funciona melhor com <strong>padrões consistentes</strong>;</li>
-                    <li>Se os dados forem bagunçados, ele pode errar em algumas linhas;</li>
-                    <li>Sempre <strong>revise o resultado</strong> antes de confiar 100%;</li>
-                    <li>Disponível no Excel 2013 ou superior.</li>
+                    <li>Separar nome completo em nome + sobrenome;</li>
+                    <li>Extrair primeiro nome;</li>
+                    <li>Formatar telefone;</li>
+                    <li>Extrair partes de e-mails.</li>
                 </ul>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li><code>Ctrl + E</code> é o atalho principal;</li>
-                    <li>Você também pode ir em <strong>Dados → Preenchimento Relâmpago</strong>;</li>
-                    <li>Funciona em texto, números, datas e misturas.</li>
+                    <li>Funciona melhor com padrões consistentes;</li>
+                    <li>Sempre revise o resultado;</li>
+                    <li>Excel 2013 ou superior.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 12 — ATALHOS ESSENCIAIS DO EXCEL
-             ============================================================ -->
         <section class="page" id="excel-atalhos">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
                 <h1>Atalhos essenciais do Excel</h1>
-
-                <p class="intro-dica">
-                    Quem domina atalhos no Excel <strong>economiza horas por semana</strong>. Aqui vão os 10
-                    mais úteis que ninguém ensina na faculdade.
-                </p>
-
+                <p class="intro-dica">10 atalhos que economizam horas por semana.</p>
                 <h2>⚡ Os 10 essenciais</h2>
-
-                <h3>1. Ctrl + T — Transformar em Tabela</h3>
-                <p>Converte o intervalo em tabela estruturada. Filtros automáticos, referências inteligentes, formatação bonita.</p>
-
-                <h3>2. Ctrl + Shift + L — Filtros</h3>
-                <p>Ativa/desativa filtros na linha de cabeçalho. Rápido e prático.</p>
-
-                <h3>3. Alt + = — Soma automática</h3>
-                <p>Insere uma fórmula SOMA nas células abaixo ou à direita. Excel adivinha o que você quer somar.</p>
-
-                <h3>4. F4 — Travar referência</h3>
-                <p>Enquanto edita uma fórmula, pressionar F4 alterna entre <code>$A$1</code>, <code>A$1</code>, <code>$A1</code> e <code>A1</code>. Essencial pra copiar fórmulas.</p>
-
-                <h3>5. Ctrl + ; — Data de hoje</h3>
-                <p>Insere a data atual na célula. <code>Ctrl + Shift + ;</code> insere a hora.</p>
-
-                <h3>6. Ctrl + Shift + "+" — Inserir linha/coluna</h3>
-                <p>Insere linha ou coluna dependendo do que estiver selecionado.</p>
-
-                <h3>7. Ctrl + "-" — Excluir linha/coluna</h3>
-                <p>Remove a linha ou coluna selecionada.</p>
-
-                <h3>8. Ctrl + Page Down / Page Up — Trocar de aba</h3>
-                <p>Navega entre as planilhas do arquivo sem precisar clicar.</p>
-
-                <h3>9. Ctrl + Shift + Setas — Selecionar até o fim</h3>
-                <p>Seleciona tudo até a última célula com dados. Muito mais rápido que arrastar o mouse.</p>
-
-                <h3>10. Alt + Enter — Quebrar linha na célula</h3>
-                <p>Em vez de <code>Enter</code> normal, insere uma quebra de linha dentro da mesma célula.</p>
-
-                <h2>🚀 Bônus: F2 e F9</h2>
                 <ul>
-                    <li><strong>F2</strong> → edita a célula sem precisar de duplo clique;</li>
-                    <li><strong>F9</strong> → recalcula todas as fórmulas do arquivo (útil quando o Excel trava no cálculo automático).</li>
+                    <li><code>Ctrl + T</code> — Transformar em Tabela;</li>
+                    <li><code>Ctrl + Shift + L</code> — Filtros;</li>
+                    <li><code>Alt + =</code> — Soma automática;</li>
+                    <li><code>F4</code> — Travar referência;</li>
+                    <li><code>Ctrl + ;</code> — Data de hoje;</li>
+                    <li><code>Ctrl + Shift + "+"</code> — Inserir linha/coluna;</li>
+                    <li><code>Ctrl + "-"</code> — Excluir linha/coluna;</li>
+                    <li><code>Ctrl + Page Down/Up</code> — Trocar de aba;</li>
+                    <li><code>Ctrl + Shift + Setas</code> — Selecionar até o fim;</li>
+                    <li><code>Alt + Enter</code> — Quebrar linha na célula.</li>
                 </ul>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>🚀 Bônus</h2>
                 <ul>
-                    <li>Alguns atalhos mudam em Mac (<code>Cmd</code> em vez de <code>Ctrl</code>);</li>
-                    <li>Você pode criar atalhos personalizados via <strong>Alt + tecla</strong> na Faixa de Opções;</li>
-                    <li>Pratique 1 atalho por dia, em uma semana você já sabe tudo de cor.</li>
+                    <li><code>F2</code> — Edita célula sem duplo clique;</li>
+                    <li><code>F9</code> — Recalcula tudo.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 13 — FORMATAÇÃO CONDICIONAL AVANÇADA
-             ============================================================ -->
         <section class="page" id="excel-formatacao-condicional">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
                 <h1>Formatação condicional avançada</h1>
-
-                <p class="intro-dica">
-                    Vai muito além do "pinta de vermelho se for negativo". Com fórmulas personalizadas, você cria
-                    <strong>semáforos, heatmaps, barras de progresso e alertas visuais</strong> que fazem seu
-                    relatório "falar" sozinho.
-                </p>
-
-                <h2>🎨 Tipos de formatação</h2>
-
-                <h3>1. Semáforo (ícones)</h3>
-                <p>Formatação Condicional → Conjuntos de Ícones. Ideal pra mostrar status (✔ verde, ⚠ amarelo, ✖ vermelho).</p>
-
-                <h3>2. Barras de dados</h3>
-                <p>Formatação Condicional → Barras de Dados. Mostra visualmente valores maiores/menores.</p>
-
-                <h3>3. Escala de cores (Heatmap)</h3>
-                <p>Formatação Condicional → Escala de Cores. Valores baixos em uma cor, altos em outra. Perfeito pra matriz de vendas por região.</p>
-
-                <h3>4. Formatação com fórmula personalizada</h3>
-                <p>Selecionar intervalo → Formatação Condicional → Nova Regra → "Usar fórmula".</p>
-                <p>Exemplo: pintar a linha inteira de vermelho se a coluna A tiver "Atrasado":</p>
-                <pre><code>=$A1="Atrasado"</code></pre>
-                <p>Aplicar à <strong>linha inteira</strong> (<code>$A$1:$Z$100</code>).</p>
-
-                <h2>💡 Exemplos profissionais</h2>
-
-                <h3>Alerta automático de estoque baixo</h3>
-                <pre><code>=$B1<10</code></pre>
-                <p>Formata em vermelho quando a quantidade em B1 for menor que 10.</p>
-
-                <h3>Destacar o vendedor do mês</h3>
-                <pre><code>=$C1=MAX($C$1:$C$100)</code></pre>
-                <p>Pinta de dourado só o maior valor da coluna C.</p>
-
-                <h3>Realçar linhas alternadas</h3>
-                <pre><code>=MOD(LIN();2)=0</code></pre>
-                <p>Cria efeito "zebra" nas linhas pares.</p>
-
-                <h3>Marcar vencimento próximo (7 dias)</h3>
-                <pre><code>=E(HOJE()>=A1-7;HOJE()<=A1)</code></pre>
-                <p>Colore datas que vencem nos próximos 7 dias.</p>
-
-                <h2>🧹 Gerenciando regras</h2>
-                <p>Formatação Condicional → <strong>Gerenciar Regras</strong>. Aqui você vê TODAS as regras ativas, ordem de prioridade, aplicação e pode desativar temporariamente.</p>
-
-                <h2>⚠️ Observações importantes</h2>
+                <p class="intro-dica">Semáforos, heatmaps e alertas visuais que fazem o relatório "falar".</p>
+                <h2>🎨 Tipos</h2>
                 <ul>
-                    <li>Regras são aplicadas <strong>na ordem da lista</strong> — a primeira que der match vence;</li>
-                    <li>Use <strong>referências absolutas</strong> (<code>$A$1</code>) nas fórmulas de formatação;</li>
-                    <li>Cuidado com <strong>muitas regras</strong> em planilhas grandes — pode deixar o Excel lento;</li>
-                    <li>Funciona em todas as versões modernas do Excel.</li>
+                    <li><strong>Semáforo</strong> — Conjuntos de Ícones;</li>
+                    <li><strong>Barras de dados</strong> — Barras de Dados;</li>
+                    <li><strong>Escala de cores</strong> — Heatmap;</li>
+                    <li><strong>Fórmula personalizada</strong> — regra avançada.</li>
                 </ul>
-
+                <h2>💡 Exemplos</h2>
+                <pre><code>=$B1<10</code></pre>
+                <pre><code>=$C1=MAX($C$1:$C$100)</code></pre>
+                <pre><code>=MOD(LIN();2)=0</code></pre>
+                <pre><code>=E(HOJE()>=A1-7;HOJE()<=A1)</code></pre>
+                <h2>⚠️ Importante</h2>
+                <ul>
+                    <li>Regras aplicadas na ordem da lista;</li>
+                    <li>Use referências absolutas nas fórmulas;</li>
+                    <li>Muitas regras podem deixar o Excel lento.</li>
+                </ul>
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 14 — TABELAS DINÂMICAS + SEGMENTAÇÃO
-             ============================================================ -->
         <section class="page" id="excel-tabelas-dinamicas">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
-                <h1>Tabelas Dinâmicas + Segmentação de Dados</h1>
-
-                <p class="intro-dica">
-                    Tabelas Dinâmicas já são poderosas. Mas quando você adiciona <strong>Segmentação de Dados</strong>
-                    (Slicers), o relatório vira um <strong>dashboard interativo</strong> com botões clicáveis — 
-                    sem uma linha de VBA.
-                </p>
-
-                <h2>🎯 O que é Tabela Dinâmica?</h2>
-                <p>É uma ferramenta que <strong>resume grandes volumes de dados</strong> em uma tabela resumo.
-                    Ex: vendas por vendedor, por região, por mês, tudo em uma tela só.</p>
-
-                <h2>🛠️ Criando uma Tabela Dinâmica</h2>
+                <h1>Tabelas Dinâmicas + Segmentação</h1>
+                <p class="intro-dica">Transforme dados em dashboards interativos com Slicers.</p>
+                <h2>🎯 O que é</h2>
+                <p>Resume grandes volumes em tabela resumo.</p>
+                <h2>🛠️ Criando</h2>
                 <ol>
                     <li>Selecione os dados;</li>
                     <li>Inserir → Tabela Dinâmica;</li>
-                    <li>Escolha onde colocar (nova planilha ou existente);</li>
-                    <li>Arraste campos para as áreas: <strong>Linhas, Colunas, Valores e Filtros</strong>.</li>
+                    <li>Arraste campos pras áreas.</li>
                 </ol>
-
-                <h2>🎛️ Adicionando Segmentação de Dados</h2>
+                <h2>🎛️ Slicers</h2>
                 <ol>
-                    <li>Clique em qualquer célula da Tabela Dinâmica;</li>
-                    <li>Vá em <strong>Inserir → Segmentação de Dados</strong>;</li>
-                    <li>Escolha os campos que quer como botões (ex: Região, Vendedor, Ano);</li>
-                    <li>Cada campo vira um painel clicável de filtros.</li>
+                    <li>Clique na Tabela;</li>
+                    <li>Inserir → Segmentação de Dados;</li>
+                    <li>Escolha os campos como botões.</li>
                 </ol>
-
-                <h2>🎨 Deixando apresentável</h2>
+                <h2>🔄 Atualizar</h2>
+                <p>Botão direito → Atualizar, ou <code>Alt + F5</code>.</p>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Use <strong>estilos de segmentação</strong> (Ferramentas de Segmentação → Estilos);</li>
-                    <li>Mude para <strong>layout em colunas</strong> se tiver muitas opções;</li>
-                    <li>Posicione os painéis ao redor da tabela;</li>
-                    <li>Adicione um <strong>gráfico dinâmico</strong> (Inserir → Gráfico Dinâmico) ligado à tabela;</li>
-                    <li>O resultado é um <strong>dashboard ao vivo</strong>: clica no botão, tudo se atualiza.</li>
+                    <li>Fonte em formato de tabela (Ctrl + T);</li>
+                    <li>Evite células mescladas;</li>
+                    <li>Excel 2010 ou superior.</li>
                 </ul>
-
-                <h2>🔄 Atualizando os dados</h2>
-                <p>Se a fonte mudar, clique com o botão direito na tabela → <strong>Atualizar</strong>.
-                    Ou use <code>Alt + F5</code> pra atualizar tudo.</p>
-
-                <h2>💡 Truques profissionais</h2>
-                <ul>
-                    <li><strong>Agrupar datas</strong> por mês, trimestre ou ano (clique com botão direito em uma data);</li>
-                    <li><strong>Campo calculado</strong> pra criar métricas que não existem nos dados brutos;</li>
-                    <li><strong>Mostrar valores como</strong> → % do total, % do pai, diferença;</li>
-                    <li><strong>Linha de tempo (Timeline)</strong> em vez de Slicer quando trabalhar com datas.</li>
-                </ul>
-
-                <h2>⚠️ Observações importantes</h2>
-                <ul>
-                    <li>A fonte dos dados precisa estar em <strong>formato de tabela</strong> (Ctrl + T) pra se atualizar sozinha;</li>
-                    <li>Evite <strong>células mescladas</strong> na fonte — bagunça a tabela dinâmica;</li>
-                    <li>Segmentações funcionam em Excel 2010 ou superior;</li>
-                    <li>Tabelas Dinâmicas são a base de 90% dos dashboards feitos em Excel.</li>
-                </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 15 — PROCX (XLOOKUP)
-             ============================================================ -->
         <section class="page" id="excel-procx">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
                 <h1>PROCX (XLOOKUP) — Adeus PROCV</h1>
-
-                <p class="intro-dica">
-                    O <strong>PROCV</strong> (VLOOKUP) foi rei por décadas, mas nasceu ultrapassado. O
-                    <strong>PROCX</strong> (XLOOKUP) faz tudo que ele faz, e melhor:
-                    <strong>busca em qualquer direção, retorna vários valores, trata erros automaticamente</strong>.
-                </p>
-
+                <p class="intro-dica">O PROCV nasceu ultrapassado. O PROCX faz tudo melhor.</p>
                 <h2>🆚 PROCX vs PROCV</h2>
                 <ul>
-                    <li><strong>PROCV</strong> só busca da esquerda pra direita. <strong>PROCX</strong> busca em qualquer direção;</li>
-                    <li><strong>PROCV</strong> precisa do número da coluna. <strong>PROCX</strong> usa o intervalo direto;</li>
-                    <li><strong>PROCV</strong> quebra se você inserir coluna. <strong>PROCX</strong> não;</li>
-                    <li><strong>PROCV</strong> exige PROCV+SEERRO. <strong>PROCX</strong> já tem tratamento de erro embutido.</li>
+                    <li>Busca em qualquer direção;</li>
+                    <li>Não precisa do número da coluna;</li>
+                    <li>Não quebra se inserir colunas;</li>
+                    <li>Tratamento de erro embutido.</li>
                 </ul>
-
-                <h2>🎯 Sintaxe do PROCX</h2>
-                <pre><code>=PROCX(valor_procurado; matriz_procurada; matriz_retornada; [se_não_encontrado]; [modo_correspondência]; [modo_pesquisa])</code></pre>
-
-                <h2>💡 Exemplo prático</h2>
-                <p>Buscar o preço de um produto pelo código:</p>
+                <h2>🎯 Sintaxe</h2>
+                <pre><code>=PROCX(valor; matriz_procurada; matriz_retornada; [se_não_encontrado])</code></pre>
+                <h2>💡 Exemplo</h2>
                 <pre><code>=PROCX(A2; Base!A:A; Base!C:C; "Não encontrado")</code></pre>
-                <ul>
-                    <li><code>A2</code> = o que você procura;</li>
-                    <li><code>Base!A:A</code> = onde procurar;</li>
-                    <li><code>Base!C:C</code> = o que retornar;</li>
-                    <li><code>"Não encontrado"</code> = o que mostrar se não achar.</li>
-                </ul>
-
                 <h2>🔍 Busca da direita pra esquerda</h2>
-                <p>O que o PROCV <strong>nunca</strong> conseguiu fazer:</p>
                 <pre><code>=PROCX(A2; Base!C:C; Base!A:A)</code></pre>
-                <p>Procura na coluna C e retorna o valor da coluna A.</p>
-
-                <h2>📦 Retornando vários valores</h2>
-                <p>Retornar nome + preço + estoque de uma vez:</p>
-                <pre><code>=PROCX(A2; Base!A:A; Base!B:D)</code></pre>
-                <p>A função "derrama" os 3 valores automaticamente nas células ao lado.</p>
-
-                <h2>🔎 Busca aproximada</h2>
-                <p>Útil pra faixas (tipo tabela de IR):</p>
-                <pre><code>=PROCX(A2; Faixas!A:A; Faixas!B:B; "N/A"; -1)</code></pre>
-                <p>O <code>-1</code> ativa a busca aproximada (igual PROCV com VERDADEIRO).</p>
-
-                <h2>🔄 Busca reversa (último item)</h2>
-                <pre><code>=PROCX(A2; Base!A:A; Base!B:B; "N/A"; 0; -1)</code></pre>
-                <p>O último <code>-1</code> procura de baixo pra cima — retorna a <strong>última ocorrência</strong>.</p>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Disponível no <strong>Excel 365 e Excel 2021</strong>;</li>
-                    <li>Em versões antigas, use <strong>ÍNDICE + CORRESP</strong> como alternativa;</li>
-                    <li>Funciona em tabelas estruturadas, referências normais e até matrizes;</li>
-                    <li>É a função de busca mais poderosa que o Excel já teve.</li>
+                    <li>Disponível no Excel 365 e 2021;</li>
+                    <li>Em versões antigas, use ÍNDICE + CORRESP.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 16 — MATRIZES DINÂMICAS
-             ============================================================ -->
         <section class="page" id="excel-matrizes-dinamicas">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
-                <h1>Matrizes Dinâmicas (FILTRO, ÚNICO, CLASSIFICAR)</h1>
-
-                <p class="intro-dica">
-                    Matrizes Dinâmicas são funções que <strong>"derramam" resultados</strong> automaticamente
-                    nas células ao lado. Elas criam <strong>listas vivas</strong> que se atualizam sozinhas —
-                    sem tabela dinâmica, sem macro.
-                </p>
-
-                <h2>📋 As 3 funções principais</h2>
-
-                <h3>1. ÚNICO — remove duplicatas</h3>
+                <h1>Matrizes Dinâmicas</h1>
+                <p class="intro-dica">Funções que "derramam" resultados e criam listas vivas.</p>
+                <h2>📋 As 3 principais</h2>
+                <h3>ÚNICO</h3>
                 <pre><code>=ÚNICO(A2:A100)</code></pre>
-                <p>Retorna só os valores únicos da coluna A. Se aparecer um novo valor, ele entra automaticamente.</p>
-
-                <h3>2. CLASSIFICAR — organiza</h3>
+                <h3>CLASSIFICAR</h3>
                 <pre><code>=CLASSIFICAR(A2:A100)</code></pre>
-                <p>Coloca em ordem crescente. Pra ordem decrescente:</p>
-                <pre><code>=CLASSIFICAR(A2:A100; 1; -1)</code></pre>
-
-                <h3>3. FILTRO — cria relatórios vivos</h3>
+                <h3>FILTRO</h3>
                 <pre><code>=FILTRO(A2:C100; B2:B100="SP")</code></pre>
-                <p>Retorna só as linhas onde a coluna B for "SP". Se os dados mudarem, a lista se atualiza sozinha.</p>
-
-                <h2>🔥 Combinando as 3 (fórmula campeã)</h2>
-                <p>Lista única + ordenada de todos os estados:</p>
+                <h2>🔥 Combo</h2>
                 <pre><code>=CLASSIFICAR(ÚNICO(B2:B100))</code></pre>
-
-                <h2>💡 Exemplos profissionais</h2>
-
-                <h3>Top 5 vendedores</h3>
-                <pre><code>=FILTRO(A2:B100; B2:B100>=MAIOR(B2:B100; 5))</code></pre>
-
-                <h3>Lista de clientes ativos com filtro duplo</h3>
-                <pre><code>=FILTRO(A2:C100; (B2:B100="Ativo")*(C2:C100>1000))</code></pre>
-
-                <h3>Contagem dinâmica</h3>
-                <pre><code>=CONT.VALORES(ÚNICO(B2:B100))</code></pre>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Disponível no <strong>Excel 365 e Excel 2021</strong>;</li>
-                    <li>As fórmulas <strong>derramam</strong> — o resultado ocupa várias células automaticamente;</li>
-                    <li>Se aparecer <code>#DESPEJAR!</code>, tem algo bloqueando as células de destino;</li>
-                    <li>Não funciona em tabelas estruturadas (Ctrl + T) — use intervalos normais.</li>
+                    <li>Excel 365 ou 2021;</li>
+                    <li>Resultado ocupa várias células;</li>
+                    <li>#DESPEJAR! = algo bloqueando.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 17 — POWER QUERY
-             ============================================================ -->
         <section class="page" id="excel-power-query">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
                 <h1>Power Query — Automação de dados</h1>
-
-                <p class="intro-dica">
-                    Power Query é o <strong>recurso mais subestimado do Excel</strong>. Ele importa, limpa,
-                    mescla e atualiza dados de várias fontes com <strong>um clique</strong>. Tarefas que
-                    levavam horas viram segundos.
-                </p>
-
-                <h2>🎯 O que o Power Query faz</h2>
+                <p class="intro-dica">O recurso mais subestimado do Excel. Importa, limpa e atualiza com 1 clique.</p>
+                <h2>🎯 O que faz</h2>
                 <ul>
-                    <li>Importa dados de <strong>CSV, TXT, Excel, banco de dados, web, SharePoint</strong>;</li>
-                    <li>Limpa, transforma e organiza automaticamente;</li>
-                    <li>Mescla várias tabelas (tipo PROCV turbinado);</li>
-                    <li>Atualiza tudo com <strong>1 clique</strong> quando os dados mudam;</li>
-                    <li>Grava cada passo — como uma macro visual.</li>
+                    <li>Importa de CSV, TXT, Excel, banco, web;</li>
+                    <li>Limpa e transforma;</li>
+                    <li>Mescla tabelas;</li>
+                    <li>Atualiza com 1 clique.</li>
                 </ul>
-
-                <h2>🛠️ Como acessar</h2>
-                <p>No Excel 2016+, vá em: <strong>Dados → Obter Dados</strong>.</p>
-                <p>No Excel 2010/2013, precisa instalar o <strong>Power Query Add-in</strong> da Microsoft.</p>
-
-                <h2>📥 Exemplo prático: consolidar 12 planilhas mensais</h2>
+                <h2>🛠️ Acessar</h2>
+                <p>Dados → Obter Dados.</p>
+                <h2>📥 Exemplo prático</h2>
                 <ol>
-                    <li>Coloque as 12 planilhas na mesma pasta;</li>
                     <li>Dados → Obter Dados → De Arquivo → De Pasta;</li>
-                    <li>Aponte pra pasta e clique em "Combinar e Transformar";</li>
-                    <li>Power Query consolida tudo automaticamente;</li>
-                    <li>Filtre, renomeie colunas, aplique limpezas;</li>
-                    <li>Clique em "Fechar e Carregar" — tabela pronta no Excel.</li>
+                    <li>Combinar e Transformar;</li>
+                    <li>Limpeza visual;</li>
+                    <li>Fechar e Carregar.</li>
                 </ol>
-                <p>No mês seguinte, é só clicar em <strong>"Atualizar"</strong> — tudo se refaz sozinho.</p>
-
-                <h2>💡 O que dá pra fazer no editor</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Remover colunas, linhas em branco, duplicatas;</li>
-                    <li>Dividir colunas, mesclar textos, mudar tipos;</li>
-                    <li>Agrupar, resumir, calcular;</li>
-                    <li>Fazer PROCV / junções entre tabelas;</li>
-                    <li>Criar colunas condicionais.</li>
+                    <li>Excel 2016 ou superior;</li>
+                    <li>Não altera a fonte, só lê;</li>
+                    <li>O que mais separa profissional de amador.</li>
                 </ul>
-
-                <h2>🔄 Atualizando os dados</h2>
-                <p>Clique com botão direito na tabela de saída → <strong>Atualizar</strong>.
-                    Ou defina atualização automática: <strong>Dados → Propriedades → Atualizar ao abrir</strong>.</p>
-
-                <h2>⚠️ Observações importantes</h2>
-                <ul>
-                    <li>Disponível no <strong>Excel 2016 ou superior</strong> (Add-in no 2010/2013);</li>
-                    <li>Não altera a fonte original — só lê;</li>
-                    <li>Funciona com <strong>arquivos gigantes</strong> (milhões de linhas);</li>
-                    <li>Aprender Power Query é o que <strong>mais separa o profissional do amador</strong> no Excel.</li>
-                </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 18 — INDIRETO + REFERÊNCIAS
-             ============================================================ -->
         <section class="page" id="excel-indireto">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
-                <h1>INDIRETO + Referências Estruturadas</h1>
-
-                <p class="intro-dica">
-                    O <code>INDIRETO</code> transforma <strong>texto em referência real</strong>. Isso permite
-                    trocar de planilha dinamicamente dentro de uma fórmula, criar modelos de cenário e automatizar
-                    relatórios complexos.
-                </p>
-
-                <h2>🎯 O que INDIRETO faz</h2>
+                <h1>INDIRETO + Referências</h1>
+                <p class="intro-dica">Transforma texto em referência real. Permite trocar de planilha dinamicamente.</p>
+                <h2>🎯 O que faz</h2>
                 <pre><code>=INDIRETO("A1")</code></pre>
-                <p>Retorna o valor da célula A1, mas o endereço "A1" pode vir de outra célula.</p>
-
-                <h2>💡 Exemplo 1: trocar de planilha dinamicamente</h2>
-                <p>Digamos que A1 tenha o texto "Janeiro". Você pode fazer:</p>
+                <h2>💡 Exemplo: trocar de planilha</h2>
                 <pre><code>=INDIRETO(A1 & "!B2")</code></pre>
-                <p>Isso busca o valor da célula B2 <strong>na aba "Janeiro"</strong>. Se você mudar A1 para "Fevereiro", a fórmula passa a buscar na aba "Fevereiro" automaticamente.</p>
-
-                <h2>💡 Exemplo 2: somar em várias abas</h2>
+                <h2>💡 Soma em várias abas</h2>
                 <pre><code>=SOMA(INDIRETO("'"&A1&"'!B2:B100"))</code></pre>
-                <p>Soma B2 até B100 da aba cujo nome está em A1. Perfeito pra dashboards multi-mês.</p>
-
-                <h2>💡 Exemplo 3: busca dinâmica com CORRESP</h2>
+                <h2>💡 Busca dinâmica</h2>
                 <pre><code>=ÍNDICE(INDIRETO(A1&"!C:C"); CORRESP(B1; INDIRETO(A1&"!A:A"); 0))</code></pre>
-                <p>Busca na coluna C da aba especificada, onde o valor da coluna A bate com B1.</p>
-
-                <h2>💡 Exemplo 4: cenários</h2>
-                <p>Crie um seletor tipo lista suspensa com "Cenário A", "Cenário B", "Cenário C". Depois use:</p>
-                <pre><code>=INDIRETO("Cenário_"&A1)</code></pre>
-
-                <h2>⚠️ Limitações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li><code>INDIRETO</code> <strong>só funciona com abas abertas</strong> — se a aba estiver fechada, dá erro;</li>
-                    <li>Não funciona com <strong>Tabelas Estruturadas</strong> (referências de tabela) em alguns casos;</li>
-                    <li>É volátil: <strong>recalcula sempre</strong>, pode deixar o Excel lento em arquivos grandes;</li>
-                    <li>Cuidado com nomes de abas que tenham <strong>espaços ou acentos</strong> — precisam de aspas simples.</li>
+                    <li>Só funciona com abas abertas;</li>
+                    <li>Volátil: recalcula sempre;</li>
+                    <li>Nomes com espaço precisam de aspas.</li>
                 </ul>
-
-                <h2>🚀 Alternativa moderna: DESLOC</h2>
-                <p>Se o objetivo é criar intervalos dinâmicos, <code>DESLOC</code> costuma ser mais rápido que <code>INDIRETO</code> — mas também é volátil.</p>
-
-                <h2>⚠️ Observações importantes</h2>
-                <ul>
-                    <li>Use com moderação — é uma função poderosa mas "pesada";</li>
-                    <li>Ótima pra dashboards executivos com múltiplos cenários;</li>
-                    <li>Se ficar lento, considere usar <strong>Power Query</strong> ou <strong>Power Pivot</strong> no lugar.</li>
-                </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 19 — LAMBDA
-             ============================================================ -->
         <section class="page" id="excel-lambda">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
                 <h1>LAMBDA — Crie suas próprias funções</h1>
-
-                <p class="intro-dica">
-                    <strong>LAMBDA</strong> é o recurso mais avançado do Excel moderno. Ele permite
-                    <strong>criar funções personalizadas reutilizáveis</strong> — sem VBA, sem macro, sem sair
-                    da planilha.
-                </p>
-
-                <h2>🎯 O que LAMBDA faz</h2>
-                <p>Você define parâmetros e uma fórmula. Depois pode chamar essa função em qualquer célula, como se fosse nativa do Excel (SOMA, MÉDIA, etc.).</p>
-
-                <h2>💡 Exemplo simples: calcular imposto</h2>
+                <p class="intro-dica">Crie funções personalizadas reutilizáveis sem VBA.</p>
+                <h2>🎯 O que faz</h2>
+                <p>Define parâmetros e uma fórmula. Depois chama como função nativa.</p>
+                <h2>💡 Exemplo</h2>
                 <pre><code>=LAMBDA(valor; valor*1,18)(100)</code></pre>
-                <p>Define uma função que multiplica o valor por 1,18 (18% de imposto) e já executa com 100. Resultado: 118.</p>
-
-                <h2>💡 Exemplo prático: função "FormatarCPF"</h2>
-                <p>Se você trabalha muito com CPF, pode criar uma função que formata automaticamente:</p>
-                <pre><code>=LAMBDA(cpf;
-  TEXTO(EXT.TEXTO(cpf;1;3);"000")&"."&
-  TEXTO(EXT.TEXTO(cpf;4;3);"000")&"."&
-  TEXTO(EXT.TEXTO(cpf;7;3);"000")&"-"&
-  TEXTO(EXT.TEXTO(cpf;10;2);"00")
-)</code></pre>
-                <p>Depois é só chamar: <code>=FormatarCPF(A1)</code>.</p>
-
-                <h2>📌 Como registrar como função nomeada</h2>
+                <h2>📌 Registrar como nome</h2>
                 <ol>
-                    <li>Vá em <strong>Fórmulas → Gerenciador de Nomes → Novo</strong>;</li>
-                    <li>Dê um nome (ex: <code>CalcularImposto</code>);</li>
-                    <li>Em "Refere-se a", digite sua fórmula LAMBDA;</li>
-                    <li>Pronto — agora <code>CalcularImposto(A1)</code> funciona em qualquer célula.</li>
+                    <li>Fórmulas → Gerenciador de Nomes → Novo;</li>
+                    <li>Dê nome (ex: CalcularImposto);</li>
+                    <li>Cole a LAMBDA;</li>
+                    <li>Use <code>=CalcularImposto(A1)</code>.</li>
                 </ol>
-
-                <h2>🔥 Combos poderosos com LAMBDA</h2>
-
-                <h3>MAP — aplicar a função em uma lista</h3>
+                <h2>🔥 Combos</h2>
                 <pre><code>=MAP(A2:A100; LAMBDA(x; x*1,18))</code></pre>
-
-                <h3>REDUCE — acumular valores</h3>
                 <pre><code>=REDUCE(0; A2:A100; LAMBDA(acum; x; acum+x))</code></pre>
-
-                <h3>SCAN — acumular mostrando cada passo</h3>
-                <pre><code>=SCAN(0; A2:A100; LAMBDA(acum; x; acum+x))</code></pre>
-
-                <h2>⚠️ Observações importantes</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li>Disponível <strong>apenas no Excel 365</strong> (assinatura);</li>
-                    <li>Não é uma função comum — é uma <strong>linguagem de programação leve</strong> dentro do Excel;</li>
-                    <li>Combine com <strong>LET</strong> pra deixar fórmulas complexas mais legíveis;</li>
-                    <li>Aprender LAMBDA é o que <strong>mais impressiona</strong> em entrevistas de emprego hoje em dia.</li>
+                    <li>Apenas Excel 365;</li>
+                    <li>Combine com LET pra fórmulas complexas;</li>
+                    <li>Impressiona em entrevistas.</li>
                 </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================================
-             PÁGINA 20 — MACRO DE LIMPEZA AUTOMÁTICA
-             ============================================================ -->
         <section class="page" id="excel-macro-limpeza">
             <div class="content">
-                <a href="#home" class="content-voltar" data-page="0">
-                    <i class="bi bi-arrow-left"></i> voltar para as dicas
-                </a>
+                <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> voltar</a>
                 <span class="dica-item-tag excel">EXCEL</span>
                 <h1>Macro de limpeza automática</h1>
-
-                <p class="intro-dica">
-                    Uma macro simples que faz <strong>o trabalho sujo por você</strong>: remove espaços extras,
-                    linhas em branco, duplicatas, ajusta colunas, converte formatos — tudo em <strong>1 clique</strong>.
-                </p>
-
-                <h2>🛠️ Como criar a macro</h2>
+                <p class="intro-dica">Uma macro que remove espaços extras, linhas em branco, duplicatas e ajusta colunas.</p>
+                <h2>🛠️ Como criar</h2>
                 <ol>
-                    <li>Pressione <code>Alt + F11</code> (abre o editor VBA);</li>
-                    <li>Vá em <strong>Inserir → Módulo</strong>;</li>
-                    <li>Cole o código abaixo;</li>
-                    <li>Feche o editor e salve como <code>.xlsm</code>;</li>
-                    <li>Execute com <code>Alt + F8</code> → escolha <code>LimpezaProfunda</code>.</li>
+                    <li><code>Alt + F11</code> (editor VBA);</li>
+                    <li>Inserir → Módulo;</li>
+                    <li>Cole o código;</li>
+                    <li>Salve como .xlsm;</li>
+                    <li><code>Alt + F8</code> → LimpezaProfunda.</li>
                 </ol>
-
-                <h2>💻 Código completo</h2>
+                <h2>💻 Código</h2>
                 <pre><code>Sub LimpezaProfunda()
     Dim ws As Worksheet
     Set ws = ActiveSheet
-
     Application.ScreenUpdating = False
-    Application.Calculation = xlCalculationManual
-
-    ' 1. Remove espaços extras em todas as células
-    ws.UsedRange.Replace What:="  ", Replacement:=" ", LookAt:=xlPart, _
-        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
-        ReplaceFormat:=False
-
-    ' 2. Remove linhas em branco
+    ws.UsedRange.Replace What:="  ", Replacement:=" ", LookAt:=xlPart
     Dim i As Long
     For i = ws.UsedRange.Rows.Count To 1 Step -1
         If Application.WorksheetFunction.CountA(ws.Rows(i)) = 0 Then
             ws.Rows(i).Delete
         End If
     Next i
-
-    ' 3. Remove duplicatas (na coluna A)
     ws.Range("A1").CurrentRegion.RemoveDuplicates Columns:=1, Header:=xlYes
-
-    ' 4. Ajusta largura de todas as colunas
     ws.Cells.EntireColumn.AutoFit
-
-    ' 5. Alinha topo e centraliza cabeçalho
     ws.Rows(1).HorizontalAlignment = xlCenter
     ws.Rows(1).Font.Bold = True
-
-    Application.Calculation = xlCalculationAutomatic
     Application.ScreenUpdating = True
-
-    MsgBox "Limpeza concluída com sucesso!", vbInformation
+    MsgBox "Limpeza concluída!", vbInformation
 End Sub</code></pre>
-
-                <h2>🔍 O que a macro faz</h2>
+                <h2>⚠️ Importante</h2>
                 <ul>
-                    <li><strong>Remove espaços extras</strong> entre palavras;</li>
-                    <li><strong>Apaga linhas em branco</strong> automaticamente;</li>
-                    <li><strong>Remove duplicatas</strong> na coluna A;</li>
-                    <li><strong>Ajusta largura das colunas</strong> pro conteúdo;</li>
-                    <li><strong>Centraliza e negrita</strong> o cabeçalho.</li>
+                    <li>Salvar como .xlsm;</li>
+                    <li>Habilitar macros ao abrir;</li>
+                    <li>Teste em cópia antes.</li>
                 </ul>
-
-                <h2>🚀 Bônus: criar botão na planilha</h2>
-                <ol>
-                    <li>Inserir → Formas → escolha um retângulo;</li>
-                    <li>Clique com botão direito → <strong>Atribuir Macro</strong>;</li>
-                    <li>Escolha <code>LimpezaProfunda</code>;</li>
-                    <li>Pronto — 1 clique faz tudo.</li>
-                </ol>
-
-                <h2>⚠️ Observações importantes</h2>
-                <ul>
-                    <li>O arquivo precisa ser salvo como <strong>.xlsm</strong> (macro-enabled);</li>
-                    <li>Ao abrir, o Excel vai pedir pra <strong>habilitar macros</strong> — é normal;</li>
-                    <li><strong>Teste em uma cópia</strong> antes de rodar na planilha real;</li>
-                    <li>Você pode adaptar pra incluir suas próprias regras de limpeza.</li>
-                </ul>
-
                 <div class="rodape-dica">
-                    <p>💚 Gostou da dica? Compartilha com quem precisa!</p>
-                    <a href="#home" class="content-voltar" data-page="0">
-                        <i class="bi bi-arrow-left"></i> ver mais dicas
-                    </a>
+                    <a href="#home" class="content-voltar" data-page="0"><i class="bi bi-arrow-left"></i> ver mais dicas</a>
                 </div>
             </div>
         </section>

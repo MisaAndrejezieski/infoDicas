@@ -1,5 +1,5 @@
 // ============================================================
-// INFODICAS — Lógica de navegação
+// INFODICAS — Navegação entre páginas
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,23 +9,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnVoltar = document.getElementById('btn-voltar');
     const background = document.getElementById('background');
 
-    // Mapeamento das imagens de fundo por página (na ordem)
+    // Mapeamento: índice da página → imagem de fundo
+    // Ordem: home, 10 Windows, 10 Excel
     const imagensFundo = [
-        'images/monge_codigo_001.jpg',
-        'images/monge_codigo_002.jpg',
-        'images/monge_codigo_003.jpg',
-        'images/codigo_001.jpg',
-        'images/gato_codigo_001.jpg',
-        'images/Rachel_001.jpg'
+        'images/monge_codigo_001.jpg',   // 0  home
+        'images/zen_001.jpg',            // 1  reiniciar windows
+        'images/samurai_001.jpg',        // 2  matar processo
+        'images/codigo_001.jpg',         // 3  reset rede
+        'images/monge_codigo_002.jpg',   // 4  sfc scannow
+        'images/monge_codigo_003.jpg',   // 5  dism
+        'images/gato_codigo_001.jpg',    // 6  saude disco
+        'images/girl_001.jpg',           // 7  diskpart pendrive
+        'images/Rachel_001.jpg',         // 8  relatorio energia
+        'images/geisha_006.jpg',         // 9  gerenciar usuarios
+        'images/geisha_001.jpg',         // 10 limpeza profunda
+        'images/geisha_002.jpg',         // 11 ctrl E
+        'images/geisha_003.jpg',         // 12 atalhos
+        'images/geisha_004.jpg',         // 13 formatacao condicional
+        'images/geisha_005.jpg',         // 14 tabelas dinamicas
+        'images/geisha_007.jpg',         // 15 procs
+        'images/geisha_008.jpg',         // 16 matrizes dinamicas
+        'images/geisha_009.jpg',         // 17 power query
+        'images/geisha_010.jpg',         // 18 indireto
+        'images/geisha_011.jpg',         // 19 lambda
+        'images/geisha_005.jpg'          // 20 macro limpeza (repetida)
     ];
 
     let currentPageIndex = 0;
     let timeout;
 
-    // Carrega a imagem de fundo da página
     function loadBackground(index) {
         if (!background) return;
-
         const imagem = imagensFundo[index] || imagensFundo[0];
         const img = new Image();
 
@@ -45,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = imagem;
     }
 
-    // Mostra a página pelo índice
     function showPage(index) {
         if (index < 0 || index >= pages.length) return;
 
@@ -64,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loadBackground(index);
     }
 
-    // Navegação por clique em qualquer elemento com data-page
     navLinks.forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
@@ -73,14 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Botão "Voltar"
     if (btnVoltar) {
-        btnVoltar.addEventListener('click', () => {
-            showPage(0);
-        });
+        btnVoltar.addEventListener('click', () => showPage(0));
     }
 
-    // Scroll do mouse (debounce)
     window.addEventListener('wheel', (e) => {
         clearTimeout(timeout);
         timeout = setTimeout(() => {
@@ -99,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 80);
     }, { passive: true });
 
-    // Swipe (touch)
     let startY = 0;
     window.addEventListener('touchstart', (e) => {
         startY = e.touches[0].clientY;
@@ -124,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { passive: true });
 
-    // Suporte a #hash
     const hash = window.location.hash.substring(1);
     if (hash) {
         const index = Array.from(pages).findIndex(p => p.id === hash);

@@ -10,29 +10,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const background = document.getElementById('background');
 
     // Mapeamento: índice da página → imagem de fundo
-    // Ordem: home, 10 Windows, 10 Excel
     const imagensFundo = [
         'images/monge_codigo_001.jpg',   // 0  home
         'images/zen_001.jpg',            // 1  reiniciar windows
         'images/samurai_001.jpg',        // 2  matar processo
         'images/codigo_001.jpg',         // 3  reset rede
-        'images/monge_codigo_002.jpg',   // 4  sfc scannow
+        'images/monge_codigo_002.jpg',   // 4  sfc
         'images/monge_codigo_003.jpg',   // 5  dism
         'images/gato_codigo_001.jpg',    // 6  saude disco
-        'images/girl_001.jpg',           // 7  diskpart pendrive
-        'images/Rachel_001.jpg',         // 8  relatorio energia
-        'images/geisha_006.jpg',         // 9  gerenciar usuarios
-        'images/geisha_001.jpg',         // 10 limpeza profunda
+        'images/girl_001.jpg',           // 7  diskpart
+        'images/Rachel_001.jpg',         // 8  energia
+        'images/geisha_006.jpg',         // 9  usuarios
+        'images/geisha_001.jpg',         // 10 limpeza
         'images/geisha_002.jpg',         // 11 ctrl E
         'images/geisha_003.jpg',         // 12 atalhos
-        'images/geisha_004.jpg',         // 13 formatacao condicional
-        'images/geisha_005.jpg',         // 14 tabelas dinamicas
+        'images/geisha_004.jpg',         // 13 formatacao
+        'images/geisha_005.jpg',         // 14 tabelas
         'images/geisha_007.jpg',         // 15 procs
-        'images/geisha_008.jpg',         // 16 matrizes dinamicas
+        'images/geisha_008.jpg',         // 16 matrizes
         'images/geisha_009.jpg',         // 17 power query
         'images/geisha_010.jpg',         // 18 indireto
         'images/geisha_011.jpg',         // 19 lambda
-        'images/geisha_005.jpg'          // 20 macro limpeza (repetida)
+        'images/geisha_005.jpg'          // 20 macro
     ];
 
     let currentPageIndex = 0;
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             background.style.opacity = '0';
             setTimeout(() => {
                 background.style.backgroundImage = `url('${imagem}')`;
-                background.style.opacity = '0.35';
+                background.style.opacity = '0.85';
             }, 200);
         };
 

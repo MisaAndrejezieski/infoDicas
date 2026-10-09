@@ -12,26 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mapeamento: índice da página → imagem de fundo
     const imagensFundo = [
         'images/monge_codigo_001.jpg',   // 0  home
-        'images/zen_001.jpg',            // 1  reiniciar windows
-        'images/samurai_001.jpg',        // 2  matar processo
-        'images/codigo_001.jpg',         // 3  reset rede
-        'images/monge_codigo_002.jpg',   // 4  sfc
-        'images/monge_codigo_003.jpg',   // 5  dism
-        'images/gato_codigo_001.jpg',    // 6  saude disco
-        'images/girl_001.jpg',           // 7  diskpart
-        'images/Rachel_001.jpg',         // 8  energia
-        'images/geisha_006.jpg',         // 9  usuarios
-        'images/geisha_001.jpg',         // 10 limpeza
-        'images/geisha_002.jpg',         // 11 ctrl E
-        'images/geisha_003.jpg',         // 12 atalhos
-        'images/geisha_004.jpg',         // 13 formatacao
-        'images/geisha_005.jpg',         // 14 tabelas
-        'images/geisha_007.jpg',         // 15 procs
-        'images/geisha_008.jpg',         // 16 matrizes
-        'images/geisha_009.jpg',         // 17 power query
-        'images/geisha_010.jpg',         // 18 indireto
-        'images/geisha_011.jpg',         // 19 lambda
-        'images/geisha_005.jpg'          // 20 macro
+        'images/zen_002.jpg',            // 1  winget  ← NOVA (troque se quiser)
+        'images/zen_001.jpg',            // 2  reiniciar windows
+        'images/samurai_001.jpg',        // 3  matar processo
+        'images/codigo_001.jpg',         // 4  reset rede
+        'images/monge_codigo_002.jpg',   // 5  sfc
+        'images/monge_codigo_003.jpg',   // 6  dism
+        'images/gato_codigo_001.jpg',    // 7  saude disco
+        'images/girl_001.jpg',           // 8  diskpart
+        'images/Rachel_001.jpg',         // 9  energia
+        'images/geisha_006.jpg',         // 10 usuarios
+        'images/geisha_001.jpg',         // 11 limpeza
+        'images/geisha_002.jpg',         // 12 ctrl E
+        'images/geisha_003.jpg',         // 13 atalhos
+        'images/geisha_004.jpg',         // 14 formatacao
+        'images/geisha_005.jpg',         // 15 tabelas
+        'images/geisha_007.jpg',         // 16 procs
+        'images/geisha_008.jpg',         // 17 matrizes
+        'images/geisha_009.jpg',         // 18 power query
+        'images/geisha_010.jpg',         // 19 indireto
+        'images/geisha_011.jpg',         // 20 lambda
+        'images/geisha_005.jpg'          // 21 macro
     ];
 
     let currentPageIndex = 0;
